@@ -1,0 +1,252 @@
+// 게시판 리스트 카드형
+.section-board-eastern-skin {
+  padding: 20px 0 40px;
+  font-family: "Roboto", 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+
+  .board-eastern-skin-category {
+    padding-bottom: 40px;
+
+    .category-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+
+      > li {
+        display: inline-block;
+        margin: 0 0 12px;
+        padding: 0 20px;
+        list-style: none;
+
+        &.on {
+          .category-list__link {
+            border-bottom: 1px solid #212121;
+            color: #212121;
+          }
+        }
+      }
+
+      .category-list__link {
+        display: inline-block;
+        padding-bottom: 4px;
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: -0.4px;
+        outline: none;
+        color: #cdcdcd;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid #212121;
+          color: #212121;
+        }
+      }
+    }
+  }
+
+  // 카드형 리스트 아이템 영역 스타일
+  .board-eastern-skin-item {
+    margin-bottom: 46px;
+  }
+
+  .board-eastern-skin-info {
+    position: relative;
+    top: 0;
+    display: block;
+    height: 100%;
+    border: 1px solid #dbdbdb;
+    text-decoration: none;
+    outline: none;
+    transition: top 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      top: -16px;
+      box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .info-thumbnail-box {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      outline: none;
+
+      .info-thumbnail {
+        display: block;
+        padding-top: 70.4%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        transition: transform 0.2s ease-out;
+      }
+    }
+
+    .info-content {
+      position: relative;
+      display: block;
+      padding: 28px;
+      // min-height: 230px;
+
+      .info-content__title {
+        display: block;
+        max-height: 56px;
+        margin-bottom: 8px;
+        font-size: 19px;
+        line-height: 28px;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        color: #181818;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-decoration: none;
+        outline: none;
+      }
+
+      .info-content__text {
+        display: block;
+        max-height: 72px;
+        margin: 0 0 16px;
+        padding: 0;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: rgba(24, 24, 24, 0.6);
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+
+    .info-meta-box {
+      // position: absolute;
+      display: block;
+      // bottom: 30px;
+      // width: calc(100% - 56px);
+      width: 100%;
+      line-height: 20px;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .info-meta-box__item-box {
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+
+        &.info-meta-box__item-box--left {
+          float: left;
+        }
+
+        &.info-meta-box__item-box--right {
+          float: right;
+        }
+
+        &.info-meta-box__item-box--other {
+          clear: both;
+          padding-top: 8px;
+
+          .info-meta__item {
+            margin-bottom: 4px;
+          }
+        }
+      }
+
+      .info-meta__item {
+        display: inline-block;
+        margin-right: 18px;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.3px;
+        color: #999;
+
+        i {
+          font-size: 17px;
+          vertical-align: top;
+        }
+
+        &.info-meta__item--last {
+          margin-right: 0;
+        }
+
+        &.info-meta__item--manage {
+          display: inline-block;
+          margin-right: 4px;
+
+          .info-meta__item-label {
+            display: inline-block;
+            margin: 0;
+            vertical-align: top;
+          }
+        }
+
+        &.info-meta__item--favorite {
+          text-decoration: none;
+          outline: none;
+
+          &.on {
+            i {
+              color: #ffda00;
+            }
+          }
+        }
+      }
+    }
+  }
+  // //카드형 리스트 아이템 영역 스타일
+}
+
+@include pc {
+  .section-board-eastern-skin {
+    padding: 40px 0 60px;
+
+    .board-eastern-skin-info {
+      .info-content {
+        min-height: 230px;
+      }
+    }
+
+    .board-eastern-skin-category {
+      padding-bottom: 48px;
+
+      .category-list {
+        .category-list__link {
+          font-size: 27px;
+          line-height: 40px;
+          padding-bottom: 7px;
+          letter-spacing: -0.39px;
+        }
+      }
+    }
+
+    // 카드형 리스트 아이템 영역 스타일
+    .board-eastern-skin-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -23px;
+      margin-right: -23px;
+    }
+
+    .board-eastern-skin-item {
+      flex: 0 0 33.3333%;
+      padding-left: 23px;
+      padding-right: 23px;
+      width: 100%;
+      max-width: 33.3333%;
+    }
+    // //카드형 리스트 아이템 영역 스타일
+  }
+}

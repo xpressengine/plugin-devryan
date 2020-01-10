@@ -1,0 +1,90 @@
+{
+  "name": "xpressengine-plugin/devryan",
+  "description": "Devryan 테마와 이와 잘 어울리는 위젯 스킨을 포함하고 있습니다",
+  "keywords": [
+    "xpressengine",
+    "xpressengine-plugin",
+    "xpressengine-theme",
+    "xe"
+  ],
+  "license": "LGPL-3.0-or-later",
+  "version": "1.0.0",
+  "type": "xpressengine-plugin",
+  "support": {
+    "email": "developers@xpressengine.com"
+  },
+  "authors": [
+    {
+      "name": "XE Developers",
+      "email": "developers@xpressengine.com",
+      "homepage": "https://www.xpressengine.com",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "xpressengine": {
+      "title": "Devryan Theme",
+      "component": {
+        "theme/devryan@devryan": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Themes\\Devryan\\DevryanTheme",
+          "name": "Devryan Theme",
+          "description": "Devryan"
+        },
+
+        "module/board@board/skin/devryan@card": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\Board\\Card\\CardSkin",
+          "name": "Devryan 게시판 카드형 스킨",
+          "description": "Devryan 게시판 카드형 스킨"
+        },
+
+        "widget/board@list/skin/devryan@galleryspot": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\ArticleList\\GallerySpot\\GallerySpotSkin",
+          "name": "Devryan 최근게시물 위젯 갤러리형 스킨",
+          "description": "Devryan 최근게시물 위젯 갤러리형 스킨"
+        },
+        "widget/board@list/skin/devryan@card": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\ArticleList\\Card\\CardSkin",
+          "name": "Devryan 최근게시물 위젯 카드형 스킨",
+          "description": "Devryan 최근게시물 위젯 카드형 스킨"
+        },
+        "widget/board@list/skin/devryan@notice": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\ArticleList\\Notice\\NoticeSkin",
+          "name": "Devryan 게시물 리스트",
+          "description": "Devryan 게시물 리스트"
+        },
+
+        "widget/banner@widget/skin/devryan@gallery": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\Banner\\Gallery\\GallerySkin",
+          "name": "Devryan GallerySkin banner skin",
+          "description": "Devryan GallerySkin 메인 배너 스킨"
+        },
+        "widget/banner@widget/skin/devryan@homemain": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\Banner\\HomeMain\\HomeMainSkin",
+          "name": "Devryan 홈페이지 메인 banner skin",
+          "description": "Devryan 홈페이지 메인 배너 스킨"
+        },
+        "widget/banner@widget/skin/devryan@homesub": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\Banner\\HomeSub\\HomeSubSkin",
+          "name": "Devryan 홈페이지 서브 banner skin",
+          "description": "Devryan 홈페이지 서브 배너 스킨"
+        },
+        "widget/banner@widget/skin/devryan@mainslide": {
+          "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\Banner\\MainSlide\\MainSlideSkin",
+          "name": "Devryan 메인슬라이드 banner skin",
+          "description": "Devryan 메인슬라이드 배너 스킨"
+        }
+      }
+    }
+  },
+  "require": {
+    "xpressengine/xpressengine": "~3.0.6",
+    "xpressengine-plugin/board": "*",
+    "xpressengine-plugin/banner": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Xpressengine\\Plugins\\Devryan\\": "./src",
+      "Xpressengine\\Plugins\\Devryan\\Components\\": "./Components"
+    }
+  }
+}

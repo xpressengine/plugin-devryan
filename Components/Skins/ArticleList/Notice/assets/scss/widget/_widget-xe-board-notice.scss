@@ -1,0 +1,146 @@
+/* section-notice-tfcw */
+.xe-widget-board-notice {
+  position: relative;
+  padding-bottom: 32px;
+
+  .xe-widget-board-notice__info {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #181818;
+
+    .xe-widget-board-notice__info-title {
+      display: inline-block;
+      margin: 0;
+      padding: 0 6px 0 0;
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+      color: #181818;
+    }
+
+    .xe-widget-board-notice__info-more-link {
+      display: inline-block;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: -0.25px;
+      text-decoration: none;
+      color: #868686;
+    }
+  }
+
+  .list-notice-tfc {
+    width: 100%;
+    padding: 0;
+  }
+
+  .item-notice {
+    padding: 10px 0 6px;
+    border-bottom: 1px solid #dfe1e6;
+
+    &:last-child {
+      border-bottom: 0 none;
+    }
+  }
+
+  .link-notice {
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .title-notice {
+    display: block;
+    padding-bottom: 2px;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(24, 24, 24, 0.8);
+  }
+
+  .text-notice-date {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.17px;
+    color: rgba(124, 124, 124, 0.8);
+  }
+
+  .box-notice {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .date {
+    position: relative;
+    padding-left: 10px;
+  }
+
+  .date::before {
+    content: '·';
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: 2px;
+    right: 0;
+  }
+}
+
+@include tablets {
+  .xe-widget-board-notice {
+    .xe-widget-board-notice__info {
+      padding-bottom: 19px;
+      border-bottom: 0 none;
+
+      .xe-widget-board-notice__info-title {
+        display: inline-block;
+        margin: 0;
+        padding: 0 16px 0 0;
+        font-size: 25px;
+        line-height: 37px;
+        font-weight: 500;
+        letter-spacing: -0.14px;
+        color: #181818;
+      }
+    }
+
+    .link-notice {
+      position: relative;
+      padding-right: 85px;
+    }
+
+    .title-notice {
+      display: block;
+      padding-right: 16px;
+      font-size: 16px;
+      line-height: 28px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .text-notice-date {
+      position: absolute;
+      top: 2px;
+      right: 0;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+    }
+
+    .item-notice {
+      padding: 14px 0 10px;
+    }
+
+    .list-notice-tfc {
+      padding: 0;
+    }
+  }
+}
+
+@include pc {
+  .xe-widget-board-notice {
+    padding-bottom: 60px;
+  }
+}
