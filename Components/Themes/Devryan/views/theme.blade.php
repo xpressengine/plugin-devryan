@@ -44,27 +44,7 @@
             <button type="button" class="header__button-menu" style="font-size: 30px;"><i class="xi-bars"></i><span class="blind">모바일 메뉴버튼</span></button>
 
             <nav class="gnb gnb--pc ">
-                <ul class="gnb__menu">
-                    @foreach (menu_list($config->get('mainMenu')) as $menu)
-                    <li class="">
-                        <a href="{{ url($menu['url']) }}" class="gnb__menu-link  ">
-                            <span class="gnb__menu-link-text">{{ $menu['link'] }} <i class="xi-external-link"></i></span>
-                        </a>
-
-                        @if (count($menu['children']))
-                        <ul class="gnb__submenu">
-                            @foreach ($menu['children'] as $menu1)
-                            <li class="">
-                                <a href="{{ url($menu1['url']) }}" class="gnb__submenu-link" @if ($menu1['target'] == '_blank') @endif target="{{ $menu1['target'] }}" @if ($menu1['url'] == '#link') onclick="return false;" @endif>
-                                    <span class="gnb__menu-link-text">{{ $menu1['link'] }} <i class="xi-external-link"></i></span>
-                                </a>
-                            </li>
-                            @endforeach
-                        </ul>
-                        @endif
-                    </li>
-                    @endforeach
-                </ul>
+                @include($theme::view('gnb'))
 
                 <div class="header-button-box">
                     @if (Auth::check() == false)
@@ -106,30 +86,10 @@
                     </div>
                     <!-- //로그인 되지 않았을 때 노출 -->
 
-                    <ul class="gnb__menu">
-                        @foreach (menu_list($config->get('mainMenu')) as $menu)
-                        <li class="">
-                            <a href="{{ url($menu['url']) }}" class="gnb__menu-link  ">
-                                <span class="gnb__menu-link-text">{{ $menu['link'] }} <i class="xi-external-link"></i></span>
-                            </a>
-
-                            @if (count($menu['children']))
-                            <ul class="gnb__submenu">
-                                @foreach ($menu['children'] as $menu1)
-                                <li class="">
-                                    <a href="{{ url($menu1['url']) }}" class="gnb__submenu-link" @if ($menu1['target'] == '_blank') @endif target="{{ $menu1['target'] }}" @if ($menu1['url'] == '#link') onclick="return false;" @endif>
-                                        <span class="gnb__menu-link-text">{{ $menu1['link'] }} <i class="xi-external-link"></i></span>
-                                    </a>
-                                </li>
-                                @endforeach
-                            </ul>
-                            @endif
-                        </li>
-                        @endforeach
-                    </ul>
+                    @include($theme::view('gnb'))
 
                     <!-- 2019/12/02 - 페이지 개편 시 GNB 메뉴 닫기 제거 됨 (우선 스타일로 display: none 적용해 놓았음), LJH -->
-                    <button type="button" class="gnb__button-menu"><span class="blind">GNB 메뉴 닫기</span></button>
+                    <button type="button" class="gnb__button-menu"><span class="blind">GNB 메뉴 닫기</span><i class="xi-close"></i></button>
                 </div>
             </nav>
 
@@ -141,20 +101,26 @@
     <main id="container" class="container-layout xeofficial-container">
         @include($theme::view($config->get('layoutType', 'main')))
     </main>
+
     <footer id="footer" class="footer-layout">
         {!! $config->get('footerMoreinfoHtml') !!}
 
         <div class="xe-container">
-            <div class="footer-box">
-                {!! $config->get('footerSitemap') !!}
-                <div class="footer__link-box">
-                    <ul class="footer__link-list" title="푸터 SNS 리스트">
-                        @if ($config->get('socialFacebook') != '')
-                        <li><a href="{{$config->get('socialFacebook', 'https://www.facebook.com/xehub/')}}" class="footer__link footer__link--facebook" target="_blank"><span class="blind">페이스북</span></a></li>
-                        @endif
-                    </ul>
+            @if ($config->get('footerSitemap') || $config->get('useSocialLinks', 'N') === 'Y')
+                <div class="footer-box">
+                    {!! $config->get('footerSitemap') !!}
+                    @if ($config->get('useSocialLinks', 'N') === 'Y')
+                        <div class="footer__link-box">
+                            <ul class="footer__link-list" title="푸터 SNS 리스트">
+                                @if ($config->get('socialFacebook') != '')
+                                    <li><a href="{{$config->get('socialFacebook', 'https://www.facebook.com/xehub/')}}" class="footer__link footer__link--facebook" target="_blank"><span class="blind">페이스북</span></a></li>
+                                @endif
+                            </ul>
+                        </div>
+                    @endif
                 </div>
-            </div>
+            @endif
+
             <div class="footer-info">
                 {!! $config->get('serviceInfo', '
                 <ul class="footer-info-company-list" title="회사정보 리스트">

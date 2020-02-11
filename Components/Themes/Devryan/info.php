@@ -164,9 +164,17 @@ return [
         [
             'section' => [
                 'class' => 'social-section',
-                'title' => 'SNS 설정'
+                'title' => '소셜 링크'
             ],
             'fields' => [
+                'useSocialLinks' => [
+                    '_type' => 'select',
+                    'label' => '소셜 링크 표시 여부',
+                    'options' => [
+                        'Y' => '사용',
+                        'N' => '사용 안함'
+                    ]
+                ],
                 'socialFacebook' => [
                     '_type' => 'text',
                     'label' => '페이스북 링크',
