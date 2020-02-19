@@ -86,49 +86,6 @@
     src: local("Roboto Black"), local("Roboto-Black"), url(//fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2"), url(//fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmYUtfBBc-.woff) format("woff")
 }
 
-@font-face {
-    font-family: 'Avenir LT Std';
-    font-weight: 300;
-    font-style: normal;
-    src: local("Avenir LT Std 45 Book"), url("../fonts/AvenirLTStd/AvenirLTStd-Book.woff2") format("woff2"), url("../fonts/AvenirLTStd/AvenirLTStd-Book.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'Avenir LT Std';
-    font-weight: 400;
-    font-style: normal;
-    src: local("Avenir LT Std 55 Roman"), url("../fonts/AvenirLTStd/AvenirLTStd-Roman.woff2") format("woff2"), url("../fonts/AvenirLTStd/AvenirLTStd-Roman.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'Avenir LT Std';
-    font-weight: 500;
-    font-style: normal;
-    src: local("Avenir LT Std 65 Medium"), url("../fonts/AvenirLTStd/AvenirLTStd-Medium.woff2") format("woff2"), url("../fonts/AvenirLTStd/AvenirLTStd-Medium.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'Avenir LT Std';
-    font-weight: 700;
-    font-style: normal;
-    src: local("Avenir LT Std 85 Heavy"), url("../fonts/AvenirLTStd/AvenirLTStd-Heavy.woff2") format("woff2"), url("../fonts/AvenirLTStd/AvenirLTStd-Heavy.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'Avenir LT Std';
-    font-weight: 900;
-    font-style: normal;
-    src: local("Avenir LT Std 95 Black"), url("../fonts/AvenirLTStd/AvenirLTStd-Black.woff2") format("woff2"), url("../fonts/AvenirLTStd/AvenirLTStd-Black.woff") format("woff")
-}
-
-@font-face {
-    font-family: 'Lustria';
-    font-style: normal;
-    font-weight: 400;
-    src: local("Lustria"), local("Lustria-Regular"), url(http://fonts.gstatic.com/s/lustria/v3/gN167lgdhf0nd60ytRay3ALUuEpTyoUstqEm5AMlJo4.woff2) format("woff2"), url(http://fonts.gstatic.com/s/lustria/v3/pVV03LAhqnRi6PONvHzn8wLUuEpTyoUstqEm5AMlJo4.woff) format("woff");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
-}
-
 .reset-list {
     margin: 0;
     padding: 0;
@@ -4406,4 +4363,36 @@ fieldset {
 
 .date-range-picker-calendar .date-range-picker-wrap.date-range-picker-wrap--open-type .button-date i {
     display: none
+}
+
+
+.content-layout .list-group {
+  border: 1px solid #dbdbdb;
+  background-color: #fdfdfd;
+}
+.list-group-item {
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 17px;
+}
+.list-group-item-action {
+  display: block;
+  padding: 0 24px;
+  line-height: 54px;
+  color: #030201;
+  text-decoration: none;
+}
+
+.list-group-item.active,
+.list-group-item:hover,
+.list-group-item:focus {
+  background-color: #419bf9;
+}
+.list-group-item.active .list-group-item-action,
+.list-group-item:hover .list-group-item-action,
+.list-group-item:focus .list-group-item-action {
+  color: #fff;
+}
+.list-group-item:hover .list-group-item-action,
+.list-group-item:focus .list-group-item-action {
+  text-decoration: underline;
 }

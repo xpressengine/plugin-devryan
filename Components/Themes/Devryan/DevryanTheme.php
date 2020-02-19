@@ -78,4 +78,14 @@ class DevryanTheme extends GenericTheme
 
         return parent::render();
     }
+
+    public static function isModule()
+    {
+        return !!\Xpressengine\Routing\InstanceConfig::instance()->getModule();
+    }
+
+    public static function isHome()
+    {
+        return app('xe.site')->getHomeInstanceId() === \Xpressengine\Routing\InstanceConfig::instance()->getInstanceId();
+    }
 }

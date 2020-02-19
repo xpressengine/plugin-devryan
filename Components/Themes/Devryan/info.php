@@ -2,7 +2,7 @@
 return [
     'view' => 'theme',
     'setting' => [
-        /* 헤더 설정 */
+        /* 일반 설정 */
         [
             'section' => [
                 'class' => 'common-section',
@@ -13,6 +13,7 @@ return [
                     '_type' => 'select',
                     'label' => '레이아웃 형태',
                     'options' => [
+                        'auto' => '홈 페이지 자동 인식',
                         'main' => '메인 페이지용',
                         'sub' => '서브 페이지용',
                         'sub-no-header' => '서브 헤더스팟 없음',
@@ -22,6 +23,25 @@ return [
                     '_type' => 'menu',
                     'label' => '메인 메뉴',
                     'description' => '2단계까지 출력 가능'
+                ],
+                'footerMenu' => [
+                    '_type' => 'menu',
+                    'label' => '메인 메뉴',
+                    'description' => '2단계까지 출력 가능'
+                ],
+            ]
+        ],
+
+        /* 컬러셋 */
+        [
+            'section' => [
+                'class' => 'colorset-section',
+                'title' => '컬러셋 설정'
+            ],
+            'fields' => [
+                'colorPrimary' => [
+                    '_type' => 'colorpicker',
+                    'label' => '메인 컬러 (Primary)',
                 ],
             ]
         ],
@@ -45,7 +65,7 @@ return [
                 'logoText' => [
                     '_type' => 'langText',
                     'label' => '로고 텍스트',
-                    'description' => '상단에 표시될 사이트 이름 및 로고 이미지의 대체 텍스트',
+                    'description' => '상단에 표시될 사이트 이름 또는 로고 이미지의 대체 텍스트',
                 ],
                 'logoImage' => [
                     '_type' => 'image',
@@ -106,6 +126,24 @@ return [
         ],
 
         /* 서브 페이지 설정 */
+        [
+            'section' => [
+                'class' => 'subpage-section',
+                'title' => '서브페이지 설정'
+            ],
+            'fields' => [
+                'useSubSidebar' => [
+                    '_type' => 'select',
+                    'label' => '사이드 메뉴 출력',
+                    'options' => [
+                        'Y' => '표시함',
+                        'N' => '표시 안함'
+                    ]
+                ]
+            ]
+        ],
+
+        /* 서브페이지 헤더스팟 설정 */
         [
             'section' => [
                 'class' => 'sub-header-stop-section',
@@ -209,7 +247,7 @@ return [
                     '_type' => 'textarea',
                     'label' => '패밀리 사이트 링크',
                     'description' => '이름,링크 표시 / 줄바꿈으로 항목 추가'
-               ],
+                ],
                 'serviceInfo' => [
                     '_type' => 'textarea',
                     'label' => '서비스 정보',
@@ -236,12 +274,7 @@ return [
         'desktop' => true
     ],
     'editable' => [
-        'theme.blade.php',
-        'gnb.blade.php',
-        'gnb_mobile.blade.php',
-        'main.blade.php',
-        'sub.blade.php',
-        'full.blade.php',
+        '_setup-custom.blade.php',
         '../assets/css/_custom.css',
     ]
 ];

@@ -1,5 +1,12 @@
 <ul class="gnb__menu">
     @foreach (menu_list($config->get('mainMenu')) as $menu)
+        @php
+            // 선택된 메뉴
+            if ($menu['selected']) {
+                $config->_selectedMainMenu = $menu;
+            }
+        @endphp
+
         <li>
             <a href="{{ url($menu['url']) }}" class="gnb__menu-link @if ($menu['target'] == '_blank') header-gnb-list__link--target-blank @endif " @if ($menu['target'] !== '_self') target="{{ $menu['target'] }}" @endif>
                 <span class="gnb__menu-link-text">{{ $menu['link'] }}@if ($menu['target'] == '_blank') <i class="xi-external-link"></i>@endif</span>

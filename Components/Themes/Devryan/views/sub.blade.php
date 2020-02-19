@@ -51,8 +51,22 @@
             </div>
         </div>
         @endif
+    </div>
 
-        {!! $content !!}
+    <div class="xe-container">
+        <div class="xe-row">
+            {{-- 서브 페이지 사이드바 --}}
+            @if ($config->get('useSubSidebar', 'Y') === 'Y')
+                <div class="xe-col-md-3">
+                    @include($_theme::view('sidebar'))
+                </div>
+            @endif
+
+
+            <div class="xe-col-md-{{ $config->_subContainerCol }}">
+                {!! $content !!}
+            </div>
+        </div>
     </div>
 </div>
 <!--/ sub content area  -->
@@ -63,4 +77,3 @@
         <i class="xi-long-arrow-up"></i>
     </a>
 </div>
-

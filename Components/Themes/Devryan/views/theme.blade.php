@@ -1,3 +1,6 @@
+@include($theme::view('_setup'))
+@include($theme::view('_setup-custom'))
+
 <link href="https://cdn.jsdelivr.net/npm/xeicon@2.3/xeicon.min.css" type="text/css" rel="stylesheet" media="all">
 <link href="https://cdn.jsdelivr.net/gh/xpressengine/xpressengine-ui/dist/css/xe-ui.css" type="text/css" rel="stylesheet" media="all">
 
@@ -47,6 +50,7 @@
                 @include($theme::view('gnb'))
 
                 <div class="header-button-box">
+                {{ $config->get('layoutType') }}
                     @if (Auth::check() == false)
                     <a href="{{ route('login') }}" class="header-button-login">로그인</a>
                     <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
