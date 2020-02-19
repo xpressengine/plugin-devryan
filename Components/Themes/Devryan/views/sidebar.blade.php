@@ -9,5 +9,3 @@
         @endforeach
     </ul>
 @endif
-
-{{ uio('widgetbox', ['id'=>'dashboard']) }}

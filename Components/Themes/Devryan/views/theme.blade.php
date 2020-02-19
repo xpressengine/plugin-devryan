@@ -50,7 +50,6 @@
                 @include($theme::view('gnb'))
 
                 <div class="header-button-box">
-                {{ $config->get('layoutType') }}
                     @if (Auth::check() == false)
                     <a href="{{ route('login') }}" class="header-button-login">로그인</a>
                     <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
