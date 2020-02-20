@@ -2,11 +2,10 @@
 return [
     'view' => 'theme',
     'setting' => [
-        /* 일반 설정 */
         [
             'section' => [
                 'class' => 'common-section',
-                'title' => '일반 설정'
+                'title' => '기본 설정'
             ],
             'fields' => [
                 'layoutType' => [
@@ -24,39 +23,18 @@ return [
                     'label' => '메인 메뉴',
                     'description' => '2단계까지 출력 가능'
                 ],
-                'footerMenu' => [
-                    '_type' => 'menu',
-                    'label' => '메인 메뉴',
-                    'description' => '2단계까지 출력 가능'
-                ],
             ]
         ],
 
-        /* 컬러셋 */
         [
             'section' => [
-                'class' => 'colorset-section',
-                'title' => '컬러셋 설정'
+                'class' => 'brand-section',
+                'title' => '브랜드'
             ],
             'fields' => [
-                'colorPrimary' => [
-                    '_type' => 'colorpicker',
-                    'label' => '메인 컬러 (Primary)',
-                ],
-            ]
-        ],
-
-        /* 헤더 설정 */
-        [
-            'section' => [
-                'class' => 'logo-section',
-                'title' => '로고 설정'
-            ],
-            'fields' => [
-                /* 로고 설정 */
                 'logoType' => [
-                    '_type' => 'select',
-                    'label' => '로고 설정',
+                    '_type' => 'radio',
+                    'label' => '로고 출력 대상',
                     'options' => [
                         'text' => '로고 텍스트 사용',
                         'image' => '로고 이미지 사용',
@@ -72,64 +50,69 @@ return [
                     'label' => '로고 이미지',
                     'description' => '로고 이미지'
                 ],
-            ],
-        ],
-        [
-            'section' => [
-                'class' => 'gnb-section',
-                'title' => 'GNB 설정'
-            ],
-            'fields' => [
-                'gnbPcMyBtn' => [
-                    '_type' => 'textarea',
-                    'label' => '마이메뉴 PC영역 추가 버튼 정의',
-                    'description' => 'HTML 사용 가',
-                ],
-                'gnbMobileMyBtn' => [
-                    '_type' => 'textarea',
-                    'label' => '마이메뉴 Mobile영역 추가 버튼 정의',
-                    'description' => 'HTML 사용 가',
-                ],
-                'additionTopButtonUse' => [
-                    '_type' => 'select',
-                    'label' => '상단 추가 버튼 사용 여부',
-                    'options' => [
-                        'Y' => '사용함',
-                        'N' => '사용 안 함'
-                    ],
-                ],
-                'additionTopButtonUrl' => [
-                    '_type' => 'langTextarea',
-                    'label' => '상단 추가 버튼 주소',
-                ],
-                'additionTopButtonText' => [
-                    '_type' => 'langTextarea',
-                    'label' => '상단 추가 버튼 제목',
-                ],
-                'additionSideButtonUse' => [
-                    '_type' => 'select',
-                    'label' => '우측 추가 버튼 사용 여부',
-                    'options' => [
-                        'Y' => '사용함',
-                        'N' => '사용 안 함'
-                    ],
-                ],
-                'additionSideButtonUrl' => [
-                    '_type' => 'langTextarea',
-                    'label' => '우측 추가 버튼 주소',
-                ],
-                'additionSideButtonText' => [
-                    '_type' => 'langTextarea',
-                    'label' => '우측 추가 버튼 제목',
+                'colorPrimary' => [
+                    '_type' => 'colorpicker',
+                    'label' => '테마 컬러',
                 ],
             ]
         ],
 
-        /* 서브 페이지 설정 */
+        // [
+        //     'section' => [
+        //         'class' => 'gnb-section',
+        //         'title' => 'GNB 설정'
+        //     ],
+        //     'fields' => [
+        //         'gnbPcMyBtn' => [
+        //             '_type' => 'textarea',
+        //             'label' => '마이메뉴 PC영역 추가 버튼 정의',
+        //             'description' => 'HTML 사용 가',
+        //         ],
+        //         'gnbMobileMyBtn' => [
+        //             '_type' => 'textarea',
+        //             'label' => '마이메뉴 Mobile영역 추가 버튼 정의',
+        //             'description' => 'HTML 사용 가',
+        //         ],
+        //         'additionTopButtonUse' => [
+        //             '_type' => 'select',
+        //             'label' => '상단 추가 버튼 사용 여부',
+        //             'options' => [
+        //                 'Y' => '사용함',
+        //                 'N' => '사용 안 함'
+        //             ],
+        //         ],
+        //         'additionTopButtonUrl' => [
+        //             '_type' => 'langTextarea',
+        //             'label' => '상단 추가 버튼 주소',
+        //         ],
+        //         'additionTopButtonText' => [
+        //             '_type' => 'langTextarea',
+        //             'label' => '상단 추가 버튼 제목',
+        //         ],
+        //         'additionSideButtonUse' => [
+        //             '_type' => 'select',
+        //             'label' => '우측 추가 버튼 사용 여부',
+        //             'options' => [
+        //                 'Y' => '사용함',
+        //                 'N' => '사용 안 함'
+        //             ],
+        //         ],
+        //         'additionSideButtonUrl' => [
+        //             '_type' => 'langTextarea',
+        //             'label' => '우측 추가 버튼 주소',
+        //         ],
+        //         'additionSideButtonText' => [
+        //             '_type' => 'langTextarea',
+        //             'label' => '우측 추가 버튼 제목',
+        //         ],
+        //     ]
+        // ],
+
+        /* 서브페이지 헤더스팟 설정 */
         [
             'section' => [
-                'class' => 'subpage-section',
-                'title' => '서브페이지 설정'
+                'class' => 'sub-header-section',
+                'title' => '서브페이지 배너'
             ],
             'fields' => [
                 'useSubSidebar' => [
@@ -139,20 +122,10 @@ return [
                         'Y' => '표시함',
                         'N' => '표시 안함'
                     ]
-                ]
-            ]
-        ],
-
-        /* 서브페이지 헤더스팟 설정 */
-        [
-            'section' => [
-                'class' => 'sub-header-stop-section',
-                'title' => '서브페이지 헤더스팟 설정'
-            ],
-            'fields' => [
+                ],
                 'useSubHeader' => [
-                    '_type' => 'select',
-                    'label' => '메인 헤더 출력 여부',
+                    '_type' => 'radio',
+                    'label' => '상단 배너 설정',
                     'options' => [
                         'Y' => '표시함',
                         'N' => '표시 안함',
@@ -162,16 +135,16 @@ return [
                 /* 헤더 이미지 설정 */
                 'subHeaderImage' => [
                     '_type' => 'image',
-                    'label' => '헤더 이미지',
+                    'label' => '상단 배너 이미지',
                 ],
                 'subHeaderTitle' => [
                     '_type' => 'langTextarea',
-                    'label' => '헤더 제목',
+                    'label' => '상단 배너 제목',
                     'description' => 'HTML사용 가능'
                 ],
                 'subHeaderDescription' => [
                     '_type' => 'langTextarea',
-                    'label' => '헤더 설명',
+                    'label' => '상단 배너 설명',
                     'description' => 'HTML사용 가능'
                 ],
             ]
@@ -180,20 +153,42 @@ return [
         /* footer sitemap */
         [
             'section' => [
-                'class' => 'footer-sitemap-section',
-                'title' => '푸터 사이트맵'
+                'class' => 'footer-link-section',
+                'title' => '푸터 링크'
             ],
             'fields' => [
-                'footerMoreinfoHtml' => [
-                    '_type' => 'textarea',
-                    'label' => '푸터 추가 정보
-                    ',
-                    'description' => 'HTML사용 가능'
+                'footerLink1Subject' => [
+                    '_type' => 'text',
+                    'label' => '푸터 링크1 이름'
                 ],
-                'footerSitemap' => [
-                    '_type' => 'textarea',
-                    'label' => '푸터 사이트맵',
-                    'description' => 'HTML사용 가능'
+                'footerLink1Url' => [
+                    '_type' => 'text',
+                    'label' => '푸터 링크1 주소'
+                ],
+                'footerLink2Subject' => [
+                    '_type' => 'text',
+                    'label' => '푸터 링크2 이름'
+                ],
+                'footerLink2Url' => [
+                    '_type' => 'text',
+                    'label' => '푸터 링크2 주소'
+                ],
+                'footerLink3Subject' => [
+                    '_type' => 'text',
+                    'label' => '푸터 링크3 이름'
+                ],
+                'footerLink3Url' => [
+                    '_type' => 'text',
+                    'label' => '푸터 링크3 주소'
+                ],
+
+                'footerLinkPolicyServiceUrl' => [
+                    '_type' => 'text',
+                    'label' => '이용약관 주소'
+                ],
+                'footerLinkPolicyPrivateUrl' => [
+                    '_type' => 'text',
+                    'label' => '개인정보처리방침 주소'
                 ],
             ]
         ],
@@ -202,12 +197,12 @@ return [
         [
             'section' => [
                 'class' => 'social-section',
-                'title' => '소셜 링크'
+                'title' => 'SNS'
             ],
             'fields' => [
                 'useSocialLinks' => [
                     '_type' => 'select',
-                    'label' => '소셜 링크 표시 여부',
+                    'label' => 'SNS 링크 표시 여부',
                     'options' => [
                         'Y' => '사용',
                         'N' => '사용 안함'
@@ -232,7 +227,48 @@ return [
                 'socialNaverBlog' => [
                     '_type' => 'text',
                     'label' => '네이버 블로그 링크',
+                ],
+                'socialGithub' => [
+                    '_type' => 'text',
+                    'label' => '깃허브 링크',
                 ]
+            ]
+        ],
+
+        [
+            'section' => [
+                'class' => 'footer-info-section',
+                'title' => '사업자 정보'
+            ],
+            'fields' => [
+                'infoCompanyName' => [
+                    '_type' => 'text',
+                    'label' => '상호명'
+                ],
+                'infoCompanyPresident' => [
+                    '_type' => 'text',
+                    'label' => '대표자 이름'
+                ],
+                'infoCompanyTel' => [
+                    '_type' => 'text',
+                    'label' => '전화번호'
+                ],
+                'infoCompanyEmail' => [
+                    '_type' => 'text',
+                    'label' => '이메일'
+                ],
+                'infoCompanyAddress' => [
+                    '_type' => 'text',
+                    'label' => '주소'
+                ],
+                'infoCompanyNum' => [
+                    '_type' => 'text',
+                    'label' => '사업자등록번호'
+                ],
+                'infoCompanyNum2' => [
+                    '_type' => 'text',
+                    'label' => '통신판매신고번호'
+                ],
             ]
         ],
 
@@ -240,31 +276,29 @@ return [
         [
             'section' => [
                 'class' => 'footer-section',
-                'title' => '푸터 설정'
+                'title' => '푸터 추가 설정'
             ],
             'fields' => [
+                'familySiteSubject' => [
+                    '_type' => 'text',
+                    'label' => '관련 사이트 제목'
+                ],
                 'familySites' => [
                     '_type' => 'textarea',
-                    'label' => '패밀리 사이트 링크',
-                    'description' => '이름,링크 표시 / 줄바꿈으로 항목 추가'
-                ],
-                'serviceInfo' => [
-                    '_type' => 'textarea',
-                    'label' => '서비스 정보',
-                    'description' => 'HTML사용 가능'
+                    'label' => '관련 사이트',
+                    'description' => '"이름,링크"로 입력하세요. 줄바꿈으로 항목을 추가 입력하세요.'
                 ],
                 'useCopyright' => [
-                    '_type' => 'select',
-                    'label' => 'Copyright 표시 여부',
+                    '_type' => 'radio',
+                    'label' => 'Copyright 사용 여부',
                     'options' => [
-                        'Y' => '사용',
-                        'N' => '사용 안함'
+                        'Y' => '사용함',
+                        'N' => '사용 안 함'
                     ]
                 ],
                 'copyrightContent' => [
-                    '_type' => 'textarea',
-                    'label' => 'Copyright',
-                    'description' => 'HTML사용 가능'
+                    '_type' => 'text',
+                    'label' => '카피라이트 텍스트'
                 ]
             ]
         ],
