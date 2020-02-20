@@ -12,6 +12,10 @@
         }
     }
 
+    if (!$config->get('logoText') || !xe_trans($config->get('logoText'))) {
+        $config->set('logoText', app('xe.site')->getSiteConfigValue('site_title'));
+    }
+
     if ($config->get('useSubSidebar', 'Y') === 'Y') {
         $config->_subContainerCol = 9;
     }
