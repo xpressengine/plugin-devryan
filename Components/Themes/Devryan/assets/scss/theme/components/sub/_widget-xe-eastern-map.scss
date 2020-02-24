@@ -1,0 +1,52 @@
+// 지도 api 위젯 (오시는 길, 서브 페이지)
+.section-xe-eastern-map-widget {
+  padding: 20px 0;
+
+  .xe-eastern-map-widget-info {
+    .xe-eastern-map-widget-info-map-box {
+      padding-bottom: 12px;
+    }
+
+    .xe-eastern-map-widget-info-map {
+      height: 300px;
+      vertical-align: top;
+    }
+
+    .xe-eastern-map-widget-info__button-box {
+      .xe-eastern-map-widget-info__button {
+        display: block;
+        width: 100%;
+        padding: 10px 30px;
+        border: 1px solid #000;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+}
+
+@include pc {
+  .section-xe-eastern-map-widget {
+    padding: 40px 0;
+
+    .xe-eastern-map-widget-info {
+      .xe-eastern-map-widget-info-map {
+        height: 512px;
+
+      }
+
+      .xe-eastern-map-widget-info__button-box {
+        text-align: right;
+
+        .xe-eastern-map-widget-info__button {
+          display: inline-block;
+          width: auto;
+        }
+      }
+    }
+  }
+}

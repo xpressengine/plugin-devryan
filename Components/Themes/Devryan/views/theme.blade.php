@@ -5,7 +5,7 @@
 <link href="https://cdn.jsdelivr.net/gh/xpressengine/xpressengine-ui/dist/css/xe-ui.css" type="text/css" rel="stylesheet" media="all">
 
 {{ app('xe.frontend')->js([
-    $_theme::asset('js/eastern-theme.js'),
+    $_theme::asset('js/devryan-theme.js'),
     $_theme::asset('js/slick.min.js'),
     $_theme::asset('js/gnb.js'),
 ])->load()}}
@@ -15,8 +15,8 @@
     'assets/core/common/css/xe-common.css',
     'assets/core/xe-ui-component/xe-ui-component.css',
     'assets/core/user/setting.css',
-    $_theme::asset('css/eastern-theme.css'),
-    $_theme::asset('css/eastern-widget.css'),
+    $_theme::asset('css/devryan-theme.css'),
+    $_theme::asset('css/devryan-widget.css'),
     $_theme::asset('css/slick.css'),
     $_theme::asset('css/_custom.css'),
 ])->load() }}

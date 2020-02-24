@@ -1,63 +1,56 @@
 <header id="header" class="header menu--open">
     <div class="header-inner-box">
         <h1 class="logo">
-            @if($config->get('logoType', 'text') === 'text')
-                <!-- [D] 로고 이미지 없을 때 텍스트 노출 -->
-                <!-- <a href="/" class="header-info-logo__link">Entrada</a> -->
-                <a href="/" class="header-info-logo__link">
+            <a href="/" class="header-info-logo__link">
+                @if($config->get('logoType', 'text') === 'text')
                     {{ xe_trans($config->get('logoText', 'asefasef')) }}
-                </a>
-            @else
-                <!-- [D] 로고 이미지 있을 때 노출 -->
-                <a href="/" class="header-info-logo__link">
-                    <img src="{{ $config->get('logoImage.path', 'plugins/entrada_theme/src/Components/Themes/Entrada/assets/img/img-logo.png') }}" class="header-info-logo__image" alt="{{ xe_trans($config->get('logoText', 'Entrada')) }}">
-                </a>
-            @endif
+                @else
+                    <img src="{{ $config->get('logoImage.path', asset('assets/core/settings/img/logo.png')) }}" class="header-info-logo__image" alt="{{ xe_trans($config->get('logoText', 'Entrada')) }}">
+                @endif
+            </a>
         </h1>
         <button type="button" class="header__button-menu" style="font-size: 30px;"><i class="xi-bars"></i><span class="blind">모바일 메뉴버튼</span></button>
 
-        <nav class="gnb gnb--pc ">
-            @include($theme::view('gnb'))
+        <nav class="gnb gnb--pc">
+            <div class="gnb-inner">
+                @include($theme::view('gnb'))
 
-            <div class="header-button-box">
-                @if (Auth::check() == false)
-                <a href="{{ route('login') }}" class="header-button-login">로그인</a>
-                <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
-                @else
-                <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
-                    {{ Auth::user()->getDisplayName() }}
-                </a>
-                @if (Auth::user()->isAdmin() == true)
-                <a href="{{ route('settings') }}" class="header-button-login">관리자 설정</a>
-                @endif
-                <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
-                <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
-                @endif
+                <div class="header-button-box">
+                    @if (Auth::check() == false)
+                        <a href="{{ route('login') }}" class="header-button-login">로그인</a>
+                        <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
+                    @else
+                        <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
+                            {{ Auth::user()->getDisplayName() }}
+                        </a>
+                        @if (Auth::user()->isAdmin() == true)
+                            <a href="{{ route('settings') }}" class="header-button-login">관리자 설정</a>
+                        @endif
+                        <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
+                        <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
+                    @endif
+                </div>
             </div>
         </nav>
 
-        <nav class="gnb gnb--mobile ">
+        <nav class="gnb gnb--mobile">
             <div class="gnb-inner">
-                <!-- 로그인 되었을 때 노출 -->
-
-                <!-- 로그인 되지 않았을 때 노출 -->
                 <div class="header-button-mobile-box">
                     @if (Auth::check() == false)
-                    <a href="{{ route('login') }}" class="header-button-login">로그인</a>
-                    <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
+                        <a href="{{ route('login') }}" class="header-button-login">로그인</a>
+                        <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
                     @else
-                    <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
-                        {{ Auth::user()->getDisplayName() }}
-                    </a>
-                    @if (Auth::user()->isAdmin() == true)
-                    <a href="{{ route('settings') }}" class="header-button-login">관리자 설정</a>
-                    @endif
-                    <br>
-                    <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
-                    <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
+                        <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
+                            {{ Auth::user()->getDisplayName() }}
+                        </a>
+                        @if (Auth::user()->isAdmin() == true)
+                            <a href="{{ route('settings') }}" class="header-button-login">관리자 설정</a>
+                        @endif
+                        <br>
+                        <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
+                        <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
                     @endif
                 </div>
-                <!-- //로그인 되지 않았을 때 노출 -->
 
                 @include($theme::view('gnb'))
 

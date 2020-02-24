@@ -1,0 +1,184 @@
+/* layout : id로 설정된 내용, body, html 부터 wrap, header, container, content, footer id로 적용된 레이아웃 잡는용도 사용 */
+
+/* body */
+
+/* 웹폰트 : Avenir LT Std, SpoqaHanSans */
+body {
+  // font-family: "Avenir LT Std", 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+  font-family: "Roboto", 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* single 페이지 모듈 적용 시 font-family 가 변경되는 현상이 있어 추가 */
+.container-layout {
+  xe-content,
+  .xe-content,
+  .xe_content {
+    // font-family: "Avenir LT Std", 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+    font-family: "Roboto", 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+  }
+}
+
+/* common */
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* html */
+html,
+body {
+  position: relative;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  word-break: keep-all;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+// ::-moz-selection {
+//   background: #ffee38;
+// }
+// ::selection {
+//   background: #ffee38;
+// }
+
+// === 메뉴 건너뛰기 영역 ====
+.skip {
+  margin: 0;
+  padding: 0;
+
+  > a {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 0;
+    line-height: 28px;
+    background-color: #fff;
+    text-align: center;
+    z-index: 1000;
+
+    &:focus {
+      height: auto;
+    }
+  }
+}
+// === //메뉴 건너뛰기 영역 ====
+
+#wrap {
+  overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#container {
+  -webkit-flex: auto 1;
+  -moz-flex: auto 1;
+  -ms-flex: auto 1;
+  -o-flex: auto 1;
+  flex: auto 1;
+}
+
+// safari 에서 bootstrap grid 사용했을 때 width가 33.3333% 일경우 레이아웃 틀어지는 현상 해결
+.xe-row {
+  &::before,
+  &::after {
+    display: block;
+  }
+}
+
+.xe-btn-primary-outline {
+  color: #4167d9;
+  border-color: #4167d9;
+
+  &:hover {
+    border-color: #2948ad;
+    background-color: #2948ad;
+  }
+
+  &:active {
+    border-color: #1f3682;
+    background-color: #1f3682;
+
+    &:hover,
+    &:focus {
+      border-color: #1f3682;
+      background-color: #1f3682;
+    }
+  }
+
+  &:focus {
+    color: #4167d9;
+    border-color: #4167d9;
+    background-color: transparent;
+
+    &:hover {
+      color: #fff;
+      border-color: #2948ad;
+      background-color: #2948ad;
+    }
+
+    &:active {
+      border-color: #1f3682;
+      background-color: #1f3682;
+    }
+  }
+
+  &[disabled] {
+    border-color: #eee;
+    color: rgba(0, 0, 0, 0.38);
+    opacity: 1;
+
+    &:hover {
+      border-color: #eee;
+      color: rgba(0, 0, 0, 0.38);
+    }
+  }
+}
+
+// 이전 구조의 서브 페이지 상하 간격 적용 (신규 페이지 작업 시 변경 필요하면 수정해야 됨, _old_contents.css 에 있음)
+.sub-content {
+  // padding: 50px 0 80px;
+  padding: 50px 0 56px;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+// @include tablets {
+//   .sub-content {
+//     // padding: 70px 0 155px;
+//     // padding: 70px 0 104px;
+//   }
+// }
+
+@include pc {
+  .sub-content {
+    // padding: 70px 0 155px;
+    padding: 70px 0 104px;
+  }
+}

@@ -57,7 +57,7 @@
         <div class="xe-row">
             {{-- 서브 페이지 사이드바 --}}
             @if ($config->get('useSubSidebar', 'Y') === 'Y')
-                <div class="xe-col-md-3">
+                <div class="xe-col-md-3 xe-hidden-xs">
                     @include($_theme::view('sidebar'))
                 </div>
             @endif

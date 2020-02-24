@@ -1,0 +1,129 @@
+// 메인 레이어 팝업
+.popup-layer-notice {
+  display: none;
+  position: absolute;
+  top: 88px;
+  left: 50px;
+
+  // 컬러
+  &.popup-layer-notice--white {
+    .popup-layer-notice-footer {
+      background-color: #fff;
+
+      .popup-layer-notice__button {
+        color: #212121;
+      }
+    }
+  }
+
+  &.popup-layer-notice--black {
+    .popup-layer-notice-footer {
+      background-color: #000;
+
+      .popup-layer-notice__button {
+        color: #fff;
+      }
+    }
+  }
+
+  // 위치
+  &.popup-layer-notice--left {
+    left: 50%;
+    right: auto;
+    margin-left: -172px;
+  }
+
+  &.popup-layer-notice--right {
+    left: 50%;
+    right: auto;
+    margin-left: -172px
+  }
+
+  .popup-layer-notice-content {
+    .popup-layer-notice__link {
+      display: block;
+      width: 343px;
+      height: 570px;
+    }
+
+    .popup-layer-notice__image {
+      width: 100%;
+      height: 100%;
+      vertical-align: top;
+    }
+  }
+
+  .popup-layer-notice-footer {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 0 none;
+    background-color: #fff;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .popup-layer-notice__button {
+      float: left;
+      padding: 9px 16px 7px;
+      border: 0 none;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.28px;
+      cursor: pointer;
+      outline: none;
+      background-color: transparent;
+      color: #212121;
+
+      &.popup-layer-notice__button-display {
+        float: left;
+      }
+
+      &.popup-layer-notice__button-close {
+        float: right;
+      }
+    }
+  }
+}
+// //메인 레이어 팝업
+
+@include pc {
+  // 메인 레이어 팝업
+  .popup-layer-notice {
+    top: 214px;
+
+    // 위치
+    &.popup-layer-notice--left {
+      left: 50px;
+      right: auto;
+      margin: 0;
+    }
+
+    &.popup-layer-notice--right {
+      left: auto;
+      right: 50px;
+      margin: 0;
+    }
+  }
+  // //메인 레이어 팝업
+}
+
+@media (min-width: 1680px) {
+  // 테마 팝업 (위치 고정)
+  .popup-layer-notice {
+    // 위치
+    &.popup-layer-notice--left {
+      left: 50%;
+      right: auto;
+      margin-left: -790px;
+    }
+
+    &.popup-layer-notice--right {
+      left: auto;
+      right: 50%;
+      margin-right: -800px;
+    }
+  }
+  // //테마 팝업 (위치 고정)
+}

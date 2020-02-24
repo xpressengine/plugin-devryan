@@ -24,6 +24,23 @@
                             @if ($children['url'] === '#') onclick="return false;" @endif>
                             <span class="gnb__menu-link-text">{{ $children['link'] }} @if ($children['target'] === '_blank') <i class="xi-external-link"></i>@endif</span>
                         </a>
+
+                        @if (count($children['children']))
+                            <ul class="gnb__submenu">
+                                @foreach ($children['children'] as $menu3depth)
+                                <li>
+                                    <a href="{{ url($menu3depth['url']) }}"
+                                        class="gnb__submenu-link @if ($menu3depth['target'] == '_blank') header-gnb-list__link--target-blank @endif "
+                                        @if ($menu3depth['target'] && $menu3depth['target'] !== '_self')
+                                            target="{{ $menu3depth['target'] }}"
+                                        @endif
+                                        @if ($menu3depth['url'] === '#') onclick="return false;" @endif>
+                                        <span class="gnb__menu-link-text">{{ $menu3depth['link'] }} @if ($menu3depth['target'] === '_blank') <i class="xi-external-link"></i>@endif</span>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        @endif
                     </li>
                     @endforeach
                 </ul>

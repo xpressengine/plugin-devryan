@@ -1,0 +1,130 @@
+// 배경 이미지 타이틀 (서브 페이지)
+.section-xe-eastern-top-image-title-widget {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 0 0 20px;
+
+  .xe-eastern-top-image-title-widget-info {
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+
+    .info-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      padding: 0 15px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+
+    .info-box {
+      position: relative;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .info-title {
+      margin: 0;
+      padding: 0;
+      font-family: 'Lustria', 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 500;
+      text-align: center;
+      color: #fff;
+
+      animation: motMov_title 1.5s 1;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    .info-text {
+      display: none;
+
+      animation: motMov_sub_title 1.5s 1;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    .info-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+
+      animation: motMov_title_header 1.5s 1;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+  }
+}
+
+@-webkit-keyframes     motMov_title_header { 0% { transform: scale(1.5) translateX(0); } 100% { transform: scale(1) translateX(0); } }
+@keyframes             motMov_title_header { 0% { transform: scale(1.5) translateX(0); } 100% { transform: scale(1) translateX(0); } }
+
+@-webkit-keyframes     motMov_title {0% { transform: translateY(20px); opacity: 0 } 50% { transform: translateY(20px); opacity: 0 }  100% { transform: translateX(0); opacity: 1 } }
+@keyframes             motMov_title {0% { transform: translateY(20px); opacity: 0 } 50% { transform: translateY(20px); opacity: 0 }  100% { transform: translateX(0); opacity: 1 } }
+
+@-webkit-keyframes     motMov_sub_title {0% { transform: translateY(20px); opacity: 0 } 65% { transform: translateY(20px); opacity: 0 } 100% { transform: translateX(0); opacity: 1 } }
+@keyframes             motMov_sub_title {0% { transform: translateY(20px); opacity: 0 } 65% { transform: translateY(20px); opacity: 0 } 100% { transform: translateX(0); opacity: 1 } }
+
+@include pc {
+  .section-xe-eastern-top-image-title-widget {
+    padding: 0 0 40px;
+
+    .xe-eastern-top-image-title-widget-info {
+      height: 400px;
+
+      .info-title {
+        padding-bottom: 12px;
+        font-size: 37px;
+        line-height: 50px;
+        font-weight: 500;
+        text-align: center;
+        color: #fff;
+      }
+
+      .info-text {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -0.7px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+
+        max-height: 54px;
+        // -webkit-line-clamp: 2;
+        // overflow: hidden;
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+      }
+
+      .info-bg {
+        height: 400px;
+      }
+    }
+  }
+}

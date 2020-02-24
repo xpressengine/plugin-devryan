@@ -1,0 +1,312 @@
+// 추가 정보 영역
+.widget-xe-eastern-more-info {
+  padding: 30px 0;
+  background-color: #fff;
+
+  .widget-xe-eastern-more-info__sub-title {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lustria', 'Noto Sans KR', "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, '돋움', Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: -0.09px;
+    color: #181818;
+  }
+
+  .widget-xe-eastern-more-info__text-box {
+    padding-top: 16px;
+  }
+
+  .widget-xe-eastern-more-info__text {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: -0.3px;
+    color: #707070;
+  }
+
+  .widget-xe-eastern-more-info__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 24px 24px;
+    vertical-align: top;
+
+    &.widget-xe-eastern-more-info__icon--phone {
+      background-image: url(../img/icon-phone.png);
+    }
+
+    &.widget-xe-eastern-more-info__icon--stacked {
+      background-image: url(../img/icon-stacked.png);
+    }
+
+    &.widget-xe-eastern-more-info__icon--send {
+      background-image: url(../img/icon-send.png);
+    }
+  }
+
+  .widget-xe-eastern-more-info-service {
+    .widget-xe-eastern-more-info-service__list {
+      margin: 0;
+      padding: 16px 0 0;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      dt {
+        margin: 0;
+        padding: 2px 16px 16px 2px;
+        float: left;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+        color: #212121;
+      }
+
+      dd {
+        overflow: hidden;
+        margin: 0;
+        padding: 0 0 16px;
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: -0.3px;
+        word-break: break-all;
+        color: #707070;
+      }
+
+      .widget-xe-eastern-more-info-service__list-more-info {
+        display: block;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .widget-xe-eastern-more-info-location {
+    padding: 32px 0;
+
+    .widget-xe-eastern-more-info-location__link {
+      display: block;
+      width: 100%;
+      height: 230px;
+    }
+
+    .widget-xe-eastern-more-info-location__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      // background-image: url(../img/img-location-thumb.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+  }
+
+  .widget-xe-eastern-more-info-consulting {
+    padding-bottom: 32px;
+
+    .widget-xe-eastern-more-info-consulting__list {
+      margin: 0;
+      padding: 10px 0 0;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      dt {
+        margin: 0;
+        padding: 0;
+        float: left;
+        padding-right: 16px;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      dd {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: 0.38px;
+        word-break: break-all;
+        color: #515154;
+      }
+    }
+  }
+
+  .widget-xe-eastern-more-info-server {
+    padding-bottom: 24px;
+
+    .widget-xe-eastern-more-info-server__list {
+      margin: 0;
+      padding: 10px 0 0;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    .widget-xe-eastern-more-info-server__list {
+      dt {
+        float: left;
+        width: 52px;
+        margin: 0;
+        padding: 4px 0 0;
+        margin-right: 16px;
+        border: 1px solid #8993a4;
+        border-radius: 3px;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        background-color: #8993a4;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      dd {
+        overflow: hidden;
+        margin: 0;
+        padding: 0 0 8px;
+        font-size: 15px;
+        line-height: 32px;
+        letter-spacing: 0.38px;
+        word-break: break-all;
+        color: #43464f;
+      }
+    }
+  }
+
+  .widget-xe-eastern-more-info__button-box {
+    .widget-xe-eastern-more-info__button-box-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      > li {
+        float: left;
+        width: 33.3333%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .widget-xe-eastern-more-info__button-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+        padding: 0 5px;
+        height: 103px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.27px;
+        text-align: center;
+        background-color: #f4f5f7;
+        text-decoration: none;
+        color: #253858;
+      }
+
+      .widget-xe-eastern-more-info__button-link-text {
+        display: inline-block;
+        padding-top: 4px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@include pc {
+  .widget-xe-eastern-more-info {
+    padding: 50px 0;
+
+    .xe-row {
+      margin: 0 -30px;
+    }
+
+    .xe-col-md-4 {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .widget-xe-eastern-more-info__sub-title {
+      border-bottom: 0 none;
+      // font-size: 25px;
+      // line-height: 37px;
+      // letter-spacing: -0.14px;
+    }
+
+    .widget-xe-eastern-more-info-location {
+      padding: 0;
+    }
+
+    .widget-xe-eastern-more-info-consulting {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .widget-xe-eastern-more-info-server {
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -16px;
+        width: 1px;
+        height: 190px;
+        background-color: #dfe1e6;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -16px;
+        width: 1px;
+        height: 190px;
+        background-color: #dfe1e6;
+      }
+    }
+
+    .widget-xe-eastern-more-info__button-box {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .widget-xe-eastern-more-info__button-box-list {
+        > li {
+          width: 100%;
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .widget-xe-eastern-more-info__button-link {
+          height: 56px;
+        }
+      }
+    }
+  }
+}

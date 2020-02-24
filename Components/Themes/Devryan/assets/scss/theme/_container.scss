@@ -1,0 +1,528 @@
+/* container : id="container" 내부 css */
+.br-mobile {
+  display: block;
+}
+
+.br-pc {
+  display: none;
+}
+
+.xeofficial-container {
+  padding-top: 72px;
+}
+
+// spot 영역
+.xeofficial-spot {
+  padding-top: 38px;
+  padding-bottom: 56px;
+}
+
+.xeofficial-spot__image-box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.xeofficial-spot__text-box {
+  width: 100%;
+  min-width: 35%;
+  padding-bottom: 381px;
+  text-align: center;
+}
+
+.xeofficial-spot__title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.21;
+  letter-spacing: -0.2px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.xeofficial-spot__content {
+  margin: 0 0 44px 0;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: -0.2px;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+.xeofficial-spot__image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 657px;
+  height: 381px;
+  margin-left: -329px;
+}
+
+.xeofficial-spot__button {
+  display: none;
+}
+
+// feature 영역
+.xeofficial-main-feature {
+  padding-bottom: 131px;
+
+  .xe-container {
+    position: relative;
+  }
+}
+
+.xeofficial-main-feature__text-box {
+  text-align: center;
+}
+
+.xeofficial-main-feature__title {
+  margin: 0 0 16px 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.21;
+  letter-spacing: -0.2px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.xeofficial-main-feature__text {
+  margin: 0 0 32px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.63;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+.xeofficial-main-feature__box {
+  position: relative;
+  margin: 0 35px;
+  padding-top: 121px;
+
+  h4 {
+    margin: 0 0 8px 0;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.47;
+    letter-spacing: -0.2px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  p {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: -0.2px;
+    color: rgba(0, 0, 0, 0.87);
+    word-break: break-all;
+    text-align: justify;
+  }
+}
+
+.xeofficial-main-feature__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 110px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 110px 110px;
+}
+
+// === 메인 about XE3 이미지 ===
+.xeofficial-main-feature__image--simplicity {
+  background-image: url(../img/img-feature-simplicity.svg);
+}
+
+.xeofficial-main-feature__image--flexibility {
+  background-image: url(../img/img-feature-flexibility.svg);
+}
+
+.xeofficial-main-feature__image--efficiency {
+  background-image: url(../img/img-feature-efficiency.svg);
+}
+// === //메인 about XE3 이미지 ===
+
+.xeofficial-main-feature__link-more-box {
+  position: absolute;
+  bottom: -49px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.xeofficial-main-feature__link-more {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4167d9;
+  text-decoration: none;
+
+  i {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    font-size: 17px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    opacity: 0.4;
+    background-color: #4167d9;
+  }
+
+  &:hover {
+    color: #2948ad;
+
+    &::before {
+      background-color: #2948ad;
+    }
+  }
+}
+
+// 메인 참여하기
+.xeofficial-main-join {
+  // padding: 56px 0;
+  padding: 80px 0;
+  background-color: #fafafa;
+}
+
+.xeofficial-main-join__box {
+  text-align: center;
+
+  > h3 {
+    margin: 0 0 12px 0;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.21;
+    letter-spacing: -0.2px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  > p {
+    margin: 0 0 32px 0;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: -0.2px;
+    color: rgba(0, 0, 0, 0.58);
+  }
+}
+
+.xeofficial-main-join__link {
+  // padding: 10px 48px 6px;
+  padding-left: 44px;
+  padding-right: 44px;
+  font-size: 15px;
+  font-weight: 500;
+  // line-height: 2;
+  // background-color: #fff;
+}
+
+.xeofficial-notice-info {
+  margin-top: -80px;
+  padding: 40px 0;
+
+  .xeofficial-notice-info__text {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: #2f2f2f;
+
+    i {
+      padding-bottom: 12px;
+      font-size: 32px;
+      vertical-align: top;
+      color: #4167d9;
+    }
+
+    span {
+      display: block;
+      vertical-align: top;
+    }
+  }
+}
+
+// 테마 탑버튼
+.top-button-box {
+  padding-bottom: 20px;
+  text-align: center;
+
+  .top-button__link {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #212121;
+
+    i {
+      font-size: 18px;
+      vertical-align: top;
+      color: #212121;
+    }
+  }
+}
+// //테마 탑버튼
+
+// 페이지 모듈 스타일 적용
+.page-container {
+  padding: 20px 0;
+
+  .xe-content {
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 300;
+      letter-spacing: -0.76px;
+      color: #212121;
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 300;
+      letter-spacing: -0.76px;
+      color: #212121;
+    }
+
+    p {
+      color: #212121;
+
+      &::after {
+        content :'';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+// //페이지 모듈 스타일 적용
+
+@include tablets {
+  .br-mobile {
+    display: none;
+  }
+
+  .br-pc {
+    display: block;
+  }
+
+  // .xeofficial-container {
+  //   padding-top: 92px;
+  // }
+
+  // spot 영역
+  .xeofficial-spot {
+    padding-top: 24px;
+    padding-bottom: 104px;
+  }
+
+  .xeofficial-spot__image-box {
+    flex-wrap: nowrap;
+    padding: 0 4vw;
+  }
+
+  .xeofficial-spot__text-box {
+    width: 43.7804878%;
+    padding-bottom: 0;
+    text-align: left;
+  }
+
+  .xeofficial-spot__title {
+    // font-size: 68px;
+    // line-height: 1.09;
+    margin-top: 26%;
+    font-size: calc(2rem + (18 * (100vw - 400px)/ 624));
+  }
+
+  .xeofficial-spot__content {
+    padding-right: 10%;
+    font-size: 18px;
+    line-height: 1.78;
+    letter-spacing: -0.2px;
+  }
+
+  .xeofficial-spot__image {
+    position: static;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+
+  .xeofficial-spot__button {
+    display: block;
+    margin-top: 10px;
+    margin-right: 20px;
+    // padding: 8px 30px 7px;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-size: 15px;
+    font-weight: 500;
+    // line-height: 29px;
+  }
+
+  .xeofficial-main-feature {
+    // padding-bottom: 123px;
+    padding-bottom: 179px;
+  }
+
+  .xeofficial-main-feature__title {
+    font-size: 48px;
+    line-height: 0.96;
+  }
+
+  .xeofficial-main-feature__text {
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    line-height: 1.78;
+  }
+
+  .xeofficial-main-feature__box {
+    padding-top: 146px;
+
+    h4 {
+      margin-bottom: 12px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.78;
+    }
+  }
+
+  .xeofficial-main-feature__detail-item-box {
+    margin-right: -35px;
+    margin-left: -35px;
+  }
+
+  .xeofficial-main-feature__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 138px;
+    height: 138px;
+    background-size: 138px 138px;
+  }
+
+  .xeofficial-main-feature__link-more-box {
+    bottom: -73px;
+    // text-align: right;
+  }
+
+  .xeofficial-main-feature__link-more {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-right: 35px;
+
+    i {
+      top: 2px;
+      font-size: 17px;
+    }
+  }
+
+  // 메인 참여하기
+  .xeofficial-main-join {
+    // padding: 80px 0;
+    padding: 104px 0;
+  }
+
+  .xeofficial-main-join__box {
+    > h3 {
+      font-size: 48px;
+      line-height: 0.96;
+    }
+
+    > p {
+      margin: 0 0 38px 0;
+      font-size: 18px;
+      line-height: 1.78;
+    }
+  }
+}
+
+@include pc {
+  .xeofficial-container {
+    // padding-top: 92px;
+  }
+
+  .xeofficial-spot__button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 4px;
+  }
+
+  .xeofficial-notice-info {
+    margin-top: -120px;
+    padding: 60px 0;
+
+    .xeofficial-notice-info__text {
+      i {
+        padding: 0;
+      }
+
+      span {
+        display: inline-block;
+        padding-top: 4px;
+      }
+    }
+  }
+
+  // 테마 탑버튼
+  .top-button-box {
+    padding-bottom: 40px;
+  }
+  // //테마 탑버튼
+
+  // 페이지 모듈 스타일 적용
+  .page-container {
+    padding: 40px 0;
+  }
+  // //페이지 모듈 스타일 적용
+}
+
+@include pc-wide {
+
+}
+
+@media (min-width: 1280px) {
+  .xeofficial-container {
+    // padding-top: 114px;
+  }
+}
+
+@media (min-width: 1486px) {
+
+}
+
+@media (min-width: 1500px) {
+  .xeofficial-container {
+    // padding-top: 121px;
+  }
+}
+
+// PC에서 spot 영역 컨트롤 하기 위해 적용
+@media (min-width: 1680px) {
+  .xeofficial-spot__image-box {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .xeofficial-spot__title {
+    font-size: 68px;
+  }
+}

@@ -39,17 +39,17 @@
 
         "widget/board@list/skin/devryan@galleryspot": {
           "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\ArticleList\\GallerySpot\\GallerySpotSkin",
-          "name": "Devryan 최근게시물 위젯 갤러리형 스킨",
+          "name": "[deprecated] Devryan 최근게시물 위젯 갤러리형 스킨",
           "description": "Devryan 최근게시물 위젯 갤러리형 스킨"
         },
         "widget/board@list/skin/devryan@card": {
           "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\ArticleList\\Card\\CardSkin",
-          "name": "Devryan 최근게시물 위젯 카드형 스킨",
+          "name": "[deprecated] Devryan 최근게시물 위젯 카드형 스킨",
           "description": "Devryan 최근게시물 위젯 카드형 스킨"
         },
         "widget/board@list/skin/devryan@notice": {
           "class": "Xpressengine\\Plugins\\Devryan\\Components\\Skins\\ArticleList\\Notice\\NoticeSkin",
-          "name": "Devryan 게시물 리스트",
+          "name": "[deprecated] Devryan 게시물 리스트",
           "description": "Devryan 게시물 리스트"
         },
 
