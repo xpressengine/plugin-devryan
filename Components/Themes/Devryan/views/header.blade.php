@@ -1,5 +1,5 @@
 <header id="header" class="xe-theme__header header menu--open">
-    <div class="header-inner-box {{ $config->get('_mainMenuContainerClass') }}">
+    <div class="header-inner-box {{ $config->_mainMenuContainerClass }}">
         <h1 class="header__logo logo">
             <a href="{{ $config->get('logoLink', '/') }}" class="header-info-logo__link">
                 @if($config->get('logoType', 'text') === 'text')
@@ -24,7 +24,7 @@
                             {{ Auth::user()->getDisplayName() }}
                         </a>
                         @if (Auth::user()->isAdmin() == true)
-                            <a href="{{ route('settings') }}" class="header-button-login">관리자 설정</a>
+                            <a href="{{ route('settings') }}" class="header-button-login" target="_blank">관리자 설정</a>
                         @endif
                         <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
                         <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
@@ -44,7 +44,7 @@
                             {{ Auth::user()->getDisplayName() }}
                         </a>
                         @if (Auth::user()->isAdmin() == true)
-                            <a href="{{ route('settings') }}" class="header-button-login">관리자 설정</a>
+                            <a href="{{ route('settings') }}" class="header-button-login" target="_blank">관리자 설정</a>
                         @endif
                         <br>
                         <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>

@@ -339,7 +339,8 @@ return [
                 ],
                 'copyrightContent' => [
                     '_type' => 'text',
-                    'label' => '카피라이트 텍스트'
+                    'label' => '카피라이트 텍스트',
+                    'value' => 'Powered by <a href="https://www.xpressengine.com/" target="_blank">XE</a>.'
                 ]
             ]
         ],

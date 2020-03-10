@@ -29,13 +29,30 @@
             </div>
 
             <div class="footer-info__more-info">
-                <span class="footer-info__company">{!! $config->get('copyrightContent', 'Copyright &copy; 엑스이허브 Co.') !!}</span>
-                {{-- 약관 --}}
-                <ul class="footer-info-terms-list">
-                    @foreach (app('xe.terms')->fetchEnabled() as $term)
-                        <li><a href="{{ route('terms', $term->id) }}" class="footer-info-terms__link" target="_blank">{{xe_trans($term->title)}}</a></li>
-                    @endforeach
-                </ul>
+                @if($config->get('copyrightContent'))
+                    <span class="footer-info__company">{!! $config->get('copyrightContent', '') !!}</span>
+                @endif
+
+                {{-- 푸터 링크 --}}
+                @if($config->_useFooterLink)
+                    <ul class="footer-info-terms-list">
+                        @if($config->get('footerLink1Subject', null) && $config->get('footerLink1Url', null))
+                            <li><a href="{{ url($config->get('footerLink1Url')) }}" class="footer-info-terms__link" target="_blank">{{ $config->get('footerLink1Subject') }}</a></li>
+                        @endif
+                        @if($config->get('footerLink2Subject', null) && $config->get('footerLink2Url', null))
+                            <li><a href="{{ url($config->get('footerLink2Url')) }}" class="footer-info-terms__link" target="_blank">{{ $config->get('footerLink2Subject') }}</a></li>
+                        @endif
+                        @if($config->get('footerLink3Subject', null) && $config->get('footerLink3Url', null))
+                            <li><a href="{{ url($config->get('footerLink3Url')) }}" class="footer-info-terms__link" target="_blank">{{ $config->get('footerLink3Subject') }}</a></li>
+                        @endif
+                        @if($config->get('footerLinkPolicyServiceUrl', null))
+                            <li><a href="{{ url($config->get('footerLinkPolicyServiceUrl')) }}" class="footer-info-terms__link" target="_blank">이용약관</a></li>
+                        @endif
+                        @if($config->get('footerLinkPolicyPrivateUrl', null))
+                            <li><a href="{{ url($config->get('footerLinkPolicyPrivateUrl')) }}" class="footer-info-terms__link" target="_blank">개인정보처리방침</a></li>
+                        @endif
+                    </ul>
+                @endif
             </div>
 
             @if($config->get('familySites'))
