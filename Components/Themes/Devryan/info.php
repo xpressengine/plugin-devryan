@@ -61,7 +61,8 @@ return [
                     'options' => [
                         'text' => '로고 텍스트 사용',
                         'image' => '로고 이미지 사용',
-                    ]
+                    ],
+                    'value' => 'text'
                 ],
                 'logoText' => [
                     '_type' => 'langText',
@@ -160,6 +161,7 @@ return [
                         'N' => '표시 안함',
                         'Y-IMAGE' => '테마 이미지 사용',
                     ],
+                    'value' => 'Y'
                 ],
                 /* 헤더 이미지 설정 */
                 'subHeaderImage' => [
@@ -329,7 +331,7 @@ return [
                     'label' => '관련 사이트',
                     'description' => '"이름,링크"로 입력하세요. 줄바꿈으로 항목을 추가 입력하세요.'
                 ],
-                'useCopyright' => [
+                'useCopyright.asdf' => [
                     '_type' => 'radio',
                     'label' => 'Copyright 사용 여부',
                     'options' => [
@@ -340,7 +342,7 @@ return [
                 'copyrightContent' => [
                     '_type' => 'text',
                     'label' => '카피라이트 텍스트',
-                    'value' => 'Powered by <a href="https://www.xpressengine.com/" target="_blank">XE</a>.'
+                    'value' => 'Powered by XE3.'
                 ]
             ]
         ],
