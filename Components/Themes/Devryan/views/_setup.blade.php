@@ -16,11 +16,18 @@
         $config->set('logoLink', url('/'));
     }
 
+    $config->set('_mainMenuContainerClass', ($config->get('mainMenuWidth', 'wide') === 'wide') ? 'xe-container-fluid' : 'xe-container');
+
     if (!$config->get('logoText') || !xe_trans($config->get('logoText'))) {
         $config->set('logoText', app('xe.site')->getSiteConfigValue('site_title'));
     }
 
+
+    // 서브 헤더
+    // 기본 값
+    $config->set('useSubHeader', $config->get('useSubHeader', 'Y'));
     if ($config->get('useSubSidebar', 'Y') === 'Y') {
+        // 서브메뉴 여부에 따른 콘텐츠 폭 조정
         $config->_subContainerCol = 9;
     }
 @endphp

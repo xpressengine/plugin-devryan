@@ -13,7 +13,7 @@ if (process.env.SOURCEMAPS === 'true' || process.env.SOURCEMAPS === '1') {
 function taskSassTheme () {
   return gulp.src(['Components/Themes/Devryan/assets/scss/*.scss', ...ignore], { sourcemaps })
     .pipe($.plumber())
-    .pipe($.sass({outputStyle: 'compressed'}).on('error', $.sass.logError))
+    .pipe($.sass({ outputStyle: 'expanded' }).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       cascade: false
     }))
@@ -24,7 +24,7 @@ taskSassTheme.displayName = 'sass:theme'
 function taskSassWidget () {
   return gulp.src(['Components/Themes/Devryan/assets/scss/*.scss', ...ignore], { sourcemaps })
     .pipe($.plumber())
-    .pipe($.sass({outputStyle: 'compressed'}).on('error', $.sass.logError))
+    .pipe($.sass({ outputStyle: 'expanded' }).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       cascade: false
     }))

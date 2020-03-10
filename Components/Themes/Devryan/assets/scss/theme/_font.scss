@@ -1,31 +1,4 @@
 @font-face {
-  font-family: 'Spoqa Han Sans';
-  font-weight: 300;
-  src:
-    local('Spoqa Han Sans Light'),
-    url(//cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.woff2) format('woff2'),
-  url(//cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansLight.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans';
-  font-weight: 400;
-  src:
-    local('Spoqa Han Sans Regular'),
-    url(//cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff2) format('woff2'),
-  url(//cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansRegular.woff) format('woff');
-}
-
-@font-face {
-  font-family: 'Spoqa Han Sans';
-  font-weight: 700;
-  src:
-    local('Spoqa Han Sans Bold'),
-    url(//cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff2) format('woff2'),
-  url(//cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@01ff0283e4f36e159ffbf744b36e16ef742da6d8/Subset/SpoqaHanSans/SpoqaHanSansBold.woff) format('woff');
-}
-
-@font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 300;

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* html */
+html,
+body {
+  position: relative;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  word-break: keep-all;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.xe-theme--devryan {
+  @import 'theme/font';     // 웹폰트 설정
+
+  @import 'common/mixin';     // 믹스인
+  @import 'common/utilities'; // 유틸리티
+
+  @import 'theme/layout';     // 레이아웃
+  @import 'theme/header';     // 헤더
+  @import 'theme/sidebar';    // 사이드바 네비게이션 영역
+  @import 'theme/container';  // 컨테이너
+  @import 'theme/content';    // 컨텐트
+  @import 'theme/footer';     // 푸터
+}

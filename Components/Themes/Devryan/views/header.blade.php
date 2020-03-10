@@ -1,6 +1,6 @@
-<header id="header" class="header menu--open">
-    <div class="header-inner-box">
-        <h1 class="logo">
+<header id="header" class="xe-theme__header header menu--open">
+    <div class="header-inner-box {{ $config->get('_mainMenuContainerClass') }}">
+        <h1 class="header__logo logo">
             <a href="{{ $config->get('logoLink', '/') }}" class="header-info-logo__link">
                 @if($config->get('logoType', 'text') === 'text')
                     {{ xe_trans($config->get('logoText', 'asefasef')) }}
@@ -11,7 +11,7 @@
         </h1>
         <button type="button" class="header__button-menu" style="font-size: 30px;"><i class="xi-bars"></i><span class="blind">모바일 메뉴버튼</span></button>
 
-        <nav class="gnb gnb--pc">
+        <nav class="xe-theme__gnb gnb gnb--pc">
             <div class="gnb-inner">
                 @include($theme::view('gnb'))
 
@@ -33,7 +33,7 @@
             </div>
         </nav>
 
-        <nav class="gnb gnb--mobile">
+        <nav class="xe-theme__gnb gnb gnb--mobile">
             <div class="gnb-inner">
                 <div class="header-button-mobile-box">
                     @if (Auth::check() == false)

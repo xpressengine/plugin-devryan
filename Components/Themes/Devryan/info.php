@@ -15,13 +15,36 @@ return [
                         'auto' => '홈 페이지 자동 인식',
                         'main' => '메인 페이지용',
                         'sub' => '서브 페이지용',
-                        'sub-no-header' => '서브 헤더스팟 없음',
+                        'sub-no-header' => '서브 헤더스팟 없음'
                     ]
+                ],
+                'mainMenuWidth' => [
+                    '_type' => 'radio',
+                    'label' => '메인 메뉴 너비',
+                    'options' => [
+                        'wide' => '넓게',
+                        'normal' => '보통'
+                    ],
+                    'value' => 'wide'
                 ],
                 'mainMenu' => [
                     '_type' => 'menu',
                     'label' => '메인 메뉴',
                     'description' => '2단계까지 출력 가능'
+                ],
+                'useFooterMenu' => [
+                    '_type' => 'radio',
+                    'label' => '푸터 메뉴 표시',
+                    'options' => [
+                        'Y' => '표시 함',
+                        'N' => '표시 안 함'
+                    ],
+                    'value' => 'Y'
+                ],
+                'footerMenu' => [
+                    '_type' => 'menu',
+                    'label' => '푸터 메뉴',
+                    'description' => '1단계까지 출력 가능'
                 ],
             ]
         ],
@@ -54,6 +77,7 @@ return [
                     '_type' => 'text',
                     'label' => '로고 링크',
                     'description' => '로고 클릭 시 주소',
+                    'value' => '/'
                 ],
                 'colorPrimary' => [
                     '_type' => 'colorpicker',
@@ -284,6 +308,18 @@ return [
                 'title' => '푸터 추가 설정'
             ],
             'fields' => [
+                'footerSitename' => [
+                    '_type' => 'text',
+                    'label' => '사이트 이름'
+                ],
+                'serviceInfo' => [
+                    '_type' => 'textarea',
+                    'label' => '사이트 정보'
+                ],
+                'footerMoreinfoHtml' => [
+                    '_type' => 'textarea',
+                    'label' => 'footer html'
+                ],
                 'familySiteSubject' => [
                     '_type' => 'text',
                     'label' => '관련 사이트 제목'
