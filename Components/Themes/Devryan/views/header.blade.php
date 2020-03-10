@@ -1,7 +1,7 @@
 <header id="header" class="header menu--open">
     <div class="header-inner-box">
         <h1 class="logo">
-            <a href="/" class="header-info-logo__link">
+            <a href="{{ $config->get('logoLink', '/') }}" class="header-info-logo__link">
                 @if($config->get('logoType', 'text') === 'text')
                     {{ xe_trans($config->get('logoText', 'asefasef')) }}
                 @else

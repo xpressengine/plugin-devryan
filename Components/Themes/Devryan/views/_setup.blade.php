@@ -12,6 +12,10 @@
         }
     }
 
+    if (!$config->get('logoLink', false)) {
+        $config->set('logoLink', url('/'));
+    }
+
     if (!$config->get('logoText') || !xe_trans($config->get('logoText'))) {
         $config->set('logoText', app('xe.site')->getSiteConfigValue('site_title'));
     }

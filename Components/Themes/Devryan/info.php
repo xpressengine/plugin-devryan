@@ -50,6 +50,11 @@ return [
                     'label' => '로고 이미지',
                     'description' => '로고 이미지'
                 ],
+                'logoLink' => [
+                    '_type' => 'text',
+                    'label' => '로고 링크',
+                    'description' => '로고 클릭 시 주소',
+                ],
                 'colorPrimary' => [
                     '_type' => 'colorpicker',
                     'label' => '테마 컬러',
