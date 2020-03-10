@@ -331,14 +331,6 @@ return [
                     'label' => '관련 사이트',
                     'description' => '"이름,링크"로 입력하세요. 줄바꿈으로 항목을 추가 입력하세요.'
                 ],
-                'useCopyright.asdf' => [
-                    '_type' => 'radio',
-                    'label' => 'Copyright 사용 여부',
-                    'options' => [
-                        'Y' => '사용함',
-                        'N' => '사용 안 함'
-                    ]
-                ],
                 'copyrightContent' => [
                     '_type' => 'text',
                     'label' => '카피라이트 텍스트',
