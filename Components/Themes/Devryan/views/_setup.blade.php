@@ -167,6 +167,8 @@
 @endif
 
 @if ($config->get('colorActive', null))
+    .xe-theme--devryan .gnb__menu > li.on .gnb__menu-link,
+    .xe-theme--devryan .gnb__menu > li.gnb__submenu--on .gnb__menu-link,
     .xe-theme--devryan .gnb__menu-link:hover {
         color: {{ $config->get('colorActive') }};
     }
