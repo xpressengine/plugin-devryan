@@ -19,7 +19,7 @@ return [
                     ]
                 ],
                 'mainMenuWidth' => [
-                    '_type' => 'radio',
+                    '_type' => 'select',
                     'label' => '메인 메뉴 너비',
                     'options' => [
                         'wide' => '넓게',
@@ -33,7 +33,7 @@ return [
                     'description' => '2단계까지 출력 가능'
                 ],
                 'useFooterMenu' => [
-                    '_type' => 'radio',
+                    '_type' => 'select',
                     'label' => '푸터 메뉴 표시',
                     'options' => [
                         'Y' => '표시 함',
@@ -56,7 +56,7 @@ return [
             ],
             'fields' => [
                 'logoType' => [
-                    '_type' => 'radio',
+                    '_type' => 'select',
                     'label' => '로고 출력 대상',
                     'options' => [
                         'text' => '로고 텍스트 사용',
