@@ -5,7 +5,7 @@
                 @if($config->get('logoType', 'text') === 'text')
                     {{ xe_trans($config->get('logoText', 'asefasef')) }}
                 @else
-                    <img src="{{ $config->get('logoImage.path', asset('assets/core/settings/img/logo.png')) }}" class="header-info-logo__image" alt="{{ xe_trans($config->get('logoText', 'Entrada')) }}">
+                    <img src="{{ $config->get('logoImage.path', asset('assets/core/settings/img/logo.png')) }}" class="header-info-logo__image" alt="{{ xe_trans($config->get('logoText', '')) }}">
                 @endif
             </a>
         </h1>

@@ -1,4 +1,4 @@
-{{ XeFrontend::css('plugins/entrada_theme/src/Components/Skins/Board/Card/assets/css/eastern-board.css')->load() }}
+{{ XeFrontend::css('plugins/devryan/src/Components/Skins/Board/Card/assets/css/devryan-board.css')->load() }}
 
 <div class="xe-container">
     <!-- 게시판 스킨 카드형 리스트 -->

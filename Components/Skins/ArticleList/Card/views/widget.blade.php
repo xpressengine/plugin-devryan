@@ -1,6 +1,6 @@
 {{
     XeFrontend::css(
-        'plugins/devryan/Components/Themes/Devryan/assets/css/eastern-widget.css'
+        'plugins/devryan/Components/Themes/Devryan/assets/css/widget.css'
     )->load()
 }}
 

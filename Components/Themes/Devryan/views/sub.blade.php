@@ -26,7 +26,7 @@
 
                                     <!-- [D] 등록된 이미지 적용  -->
                                     @if ($config->get('useSubHeader') == 'Y')
-                                        {{--$data['currentSubHeaderImage'] 경로는 EntradaTheme 에서 생성--}}
+                                        {{--$data['currentSubHeaderImage'] 경로는 DevryanTheme 에서 생성--}}
                                         <div class="info-bg" style="background-image: url({{$data['currentSubHeaderImage']}});"></div>
                                     @elseif ($config->get('useSubHeader') == 'Y-IMAGE')
                                         <div class="info-bg" style="background-image: url({{$config->get('subHeaderImage.path', '')}});"></div>
