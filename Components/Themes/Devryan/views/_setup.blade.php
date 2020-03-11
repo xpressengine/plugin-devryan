@@ -44,6 +44,14 @@
         }
     }
 
+    // SNS 링크
+    if (!$config->get('socialFacebook')
+        && !$config->get('socialMedium')
+        && !$config->get('socialGithub')
+    ) {
+        $config->set('useSocialLinks', 'N');
+    }
+
     // 푸터 링크 영역
     if ($config->get('footerLink1Subject', null)) {
         $config->_useFooterLink = true;

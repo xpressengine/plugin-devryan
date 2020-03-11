@@ -1,21 +1,26 @@
 <footer id="footer" class="xe-theme__footer footer-layout">
-    @if($config->get('footerSitename', null))
-        <div class="xe-container">
-            <p class="sitename">{{ $config->get('footerSitename', '') }}</p>
-        </div>
-    @endif
-
     <div class="xe-container">
+        @if($config->get('footerSitename'))
+            <p class="sitename">{{ $config->get('footerSitename', '') }}</p>
+        @endif
+
         @include($_theme::view('fnb'))
 
-        @if ($config->get('footerSitemap') || $config->get('useSocialLinks', 'N') === 'Y')
+        @if ($config->get('useSocialLinks') === 'Y')
             <div class="footer-box">
-                {!! $config->get('footerSitemap') !!}
-                @if ($config->get('useSocialLinks', 'N') === 'Y')
+                @if ($config->get('useSocialLinks') === 'Y')
                     <div class="footer__link-box">
                         <ul class="footer__link-list" title="푸터 SNS 리스트">
-                            @if ($config->get('socialFacebook') != '')
-                                <li><a href="{{$config->get('socialFacebook', 'https://www.facebook.com/xehub/')}}" class="footer__link footer__link--facebook" target="_blank"><span class="blind">페이스북</span></a></li>
+                            @if($config->get('socialFacebook', true))
+                                <li><a href="{{$config->get('socialFacebook', 'https://www.facebook.com/xehub')}}" class="footer__link footer__link--facebook" target="_blank"><span class="blind">Facebok</span></a></li>
+                            @endif
+
+                            @if($config->get('socialMedium', true))
+                                <li><a href="{{$config->get('socialMedium', 'https://medium.com/xehub')}}" class="footer__link footer__link--medium" target="_blank"><span class="blind">Medium</span></a></li>
+                            @endif
+
+                            @if($config->get('socialGithub', true))
+                                <li><a href="{{$config->get('socialGithub', 'https://github.com/xpressengine')}}" class="footer__link footer__link--github" target="_blank"><span class="blind">GitHub</span></a></li>
                             @endif
                         </ul>
                     </div>
@@ -24,9 +29,11 @@
         @endif
 
         <div class="footer-info">
-            <div class="service-info">
-                {!! $config->get('serviceInfo', '') !!}
-            </div>
+            @if($config->get('serviceInfo'))
+                <div class="service-info">
+                    {!! $config->get('serviceInfo', '') !!}
+                </div>
+            @endif
 
             <div class="footer-info__more-info">
                 @if($config->get('copyrightContent'))
@@ -59,8 +66,8 @@
                 <div class="footer-info__family-site-box">
                     <div class="xu-form-group footer-info__family-site">
                         <div class="xu-form-group__box xu-form-group__box--icon-right">
-                            <select class="xu-form-group__control" title="패밀리 사이트" onchange="window.open(this.value);">
-                                <option disabled="disabled" selected="selected">패밀리 사이트</option>
+                            <select class="xu-form-group__control" title="{{ $config->get('familySiteSubject', '패밀리 사이트') }}" onchange="window.open(this.value);">
+                                <option disabled="disabled" selected="selected">{{ $config->get('familySiteSubject', '패밀리 사이트') }}</option>
                                 @foreach ($data['familySites'] as $familySiteItems)
                                     <option value="{{$familySiteItems['url']}}">{{$familySiteItems['name']}}</option>
                                 @endforeach

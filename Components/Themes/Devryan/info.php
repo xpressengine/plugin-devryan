@@ -243,21 +243,9 @@ return [
                     '_type' => 'text',
                     'label' => '페이스북 링크',
                 ],
-                'socialYoutube' => [
+                'socialMedium' => [
                     '_type' => 'text',
-                    'label' => '유튜브 링크',
-                ],
-                'socialInstagram' => [
-                    '_type' => 'text',
-                    'label' => '인스타그램 링크',
-                ],
-                'socialTwitter' => [
-                    '_type' => 'text',
-                    'label' => '트위터 링크',
-                ],
-                'socialNaverBlog' => [
-                    '_type' => 'text',
-                    'label' => '네이버 블로그 링크',
+                    'label' => '미디엄 링크',
                 ],
                 'socialGithub' => [
                     '_type' => 'text',
@@ -266,42 +254,42 @@ return [
             ]
         ],
 
-        [
-            'section' => [
-                'class' => 'footer-info-section',
-                'title' => '사업자 정보'
-            ],
-            'fields' => [
-                'infoCompanyName' => [
-                    '_type' => 'text',
-                    'label' => '상호명'
-                ],
-                'infoCompanyPresident' => [
-                    '_type' => 'text',
-                    'label' => '대표자 이름'
-                ],
-                'infoCompanyTel' => [
-                    '_type' => 'text',
-                    'label' => '전화번호'
-                ],
-                'infoCompanyEmail' => [
-                    '_type' => 'text',
-                    'label' => '이메일'
-                ],
-                'infoCompanyAddress' => [
-                    '_type' => 'text',
-                    'label' => '주소'
-                ],
-                'infoCompanyNum' => [
-                    '_type' => 'text',
-                    'label' => '사업자등록번호'
-                ],
-                'infoCompanyNum2' => [
-                    '_type' => 'text',
-                    'label' => '통신판매신고번호'
-                ],
-            ]
-        ],
+        // [
+        //     'section' => [
+        //         'class' => 'footer-info-section',
+        //         'title' => '사업자 정보'
+        //     ],
+        //     'fields' => [
+        //         'infoCompanyName' => [
+        //             '_type' => 'text',
+        //             'label' => '상호명'
+        //         ],
+        //         'infoCompanyPresident' => [
+        //             '_type' => 'text',
+        //             'label' => '대표자 이름'
+        //         ],
+        //         'infoCompanyTel' => [
+        //             '_type' => 'text',
+        //             'label' => '전화번호'
+        //         ],
+        //         'infoCompanyEmail' => [
+        //             '_type' => 'text',
+        //             'label' => '이메일'
+        //         ],
+        //         'infoCompanyAddress' => [
+        //             '_type' => 'text',
+        //             'label' => '주소'
+        //         ],
+        //         'infoCompanyNum' => [
+        //             '_type' => 'text',
+        //             'label' => '사업자등록번호'
+        //         ],
+        //         'infoCompanyNum2' => [
+        //             '_type' => 'text',
+        //             'label' => '통신판매신고번호'
+        //         ],
+        //     ]
+        // ],
 
         /* Footer 설정 */
         [

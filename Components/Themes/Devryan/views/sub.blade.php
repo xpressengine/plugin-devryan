@@ -14,9 +14,10 @@
                                     <div class="info-content">
                                         <div class="info-box">
                                             @if ($config->get('useSubHeader') == 'Y')
-                                                {!! $data['currentSubHeaderDescription'] !!}
+                                                <h2 class="widget-xe-eastern-spot-slide-slider__item-content-title">{!! xe_trans($config->get('subHeaderTitle', '')) !!}</h2>
+                                                <p class="widget-xe-eastern-spot-slide-slider__item-content-text">{!! $data['currentSubHeaderDescription'] !!}</p>
                                             @elseif ($config->get('useSubHeader') == 'Y-IMAGE')
-                                                {!! xe_trans($config->get('subHeaderDescription', '')) !!}
+                                                <p class="widget-xe-eastern-spot-slide-slider__item-content-text">{!! xe_trans($config->get('subHeaderDescription', '')) !!}</p>
                                             @endif
                                         </div>
                                     </div>

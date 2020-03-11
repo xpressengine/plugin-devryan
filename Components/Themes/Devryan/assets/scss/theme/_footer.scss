@@ -1,6 +1,7 @@
 /* footer : id="footer" 내부 css */
 .footer-layout {
   position: relative;
+  padding-top: 20px;
   padding-bottom: 28px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fafafa;
@@ -147,14 +148,16 @@
     font-weight: bold;
     color: #333;
     margin: 0;
-    margin-top: 20px;
     padding-left: 10px;
+  }
+
+  .footer-box + .footer-info {
+    margin-top: 20px;
+    border-top: 1px solid rgba(211, 211, 211, 0.4);
   }
 
   .footer-info {
     padding-top: 24px;
-    border-top: 1px solid rgba(211, 211, 211, 0.4);
-
 
     .service-info {
       color: #868686;
@@ -279,6 +282,7 @@
     }
 
     li {
+      display: inline-block;
       margin-top: 0;
       margin-left: 20px;
       margin-right: 0;
@@ -406,14 +410,14 @@
     }
 
     .footer-box {
-      padding-top: 40px;
+      padding-top: 0;
       padding-bottom: 0;
     }
 
     .footer-menu-list {
       display: flex;
       margin: 0;
-      padding: 20px 10px;
+      padding: 0 10px;
       list-style: none;
 
       > li {
