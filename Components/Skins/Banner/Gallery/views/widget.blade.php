@@ -1,9 +1,9 @@
 <!-- 갤러리 배너 위젯 -->
 @php
-    XeFrontend::css(asset('plugins/devryan/src/Components/Skins/Banner/Gallery/assets/css/photoswipe.css'))->load();
-    XeFrontend::css(asset('plugins/devryan/src/Components/Skins/Banner/Gallery/assets/css/photoswipe-default-skin.css'))->load();
-    XeFrontend::js(asset('plugins/devryan/src/Components/Skins/Banner/Gallery/assets/js/photoswipe.js'))->appendTo('body')->load();
-    XeFrontend::js(asset('plugins/devryan/src/Components/Skins/Banner/Gallery/assets/js/photoswipe-ui-default.js'))->appendTo('body')->load();
+    XeFrontend::css(asset('plugins/devryan/Components/Skins/Banner/Gallery/assets/css/photoswipe.css'))->load();
+    XeFrontend::css(asset('plugins/devryan/Components/Skins/Banner/Gallery/assets/css/photoswipe-default-skin.css'))->load();
+    XeFrontend::js(asset('plugins/devryan/Components/Skins/Banner/Gallery/assets/js/photoswipe.js'))->appendTo('body')->load();
+    XeFrontend::js(asset('plugins/devryan/Components/Skins/Banner/Gallery/assets/js/photoswipe-ui-default.js'))->appendTo('body')->load();
 @endphp
 <div class="xe-row">
     <div class="xe-col-md-12">
