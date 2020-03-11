@@ -2,13 +2,9 @@
     use Xpressengine\Plugins\Devryan\Plugin;
     app('xe.frontend')->css([
         $_skin::asset('css/widget-xe-board-notice.css'),
-        Plugin::asset()'plugins/devryan/Components/Themes/Devryan/assets/css/eastern-widget.css'
+        Plugin::asset('css/widget.css')
     ])->load()
 @endphp
-{{-- {{ app('xe.frontend')->css([
-    $_skin::asset('css/widget-xe-board-notice.css'),
-    'plugins/devryan/Components/Themes/Devryan/assets/css/eastern-widget.css'
-])->load() }} --}}
 
 <section class="xe-widget-board-notice">
     <div class="xe-widget-board-notice__info">
