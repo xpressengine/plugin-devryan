@@ -70,7 +70,7 @@ class DevryanTheme extends GenericTheme
             if (is_null($currentMenu) == false && $currentMenu->description != null) {
                 $currentSubHeaderDescription = $currentMenu->description;
             } else {
-                $currentSubHeaderDescription = xe_trans($config->get('subHeaderDescription', ''));
+                $currentSubHeaderDescription = '';
             }
         }
         $this->data['currentSubHeaderImage'] = $currentSubHeaderImage;

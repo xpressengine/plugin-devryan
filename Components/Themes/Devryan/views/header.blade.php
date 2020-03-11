@@ -1,7 +1,7 @@
 <header id="header" class="xe-theme__header header menu--open">
     <div class="header-inner-box {{ $config->_mainMenuContainerClass }}">
         <h1 class="header__logo logo">
-            <a href="{{ $config->get('logoLink', '/') }}" class="header-info-logo__link">
+            <a href="{{ $config->get('logoLink', '/') }}" class="header__logo-link "header-info-logo__link">
                 @if($config->get('logoType', 'text') === 'text')
                     {{ xe_trans($config->get('logoText', 'asefasef')) }}
                 @else
@@ -17,17 +17,17 @@
 
                 <div class="header-button-box">
                     @if (Auth::check() == false)
-                        <a href="{{ route('login') }}" class="header-button-login">로그인</a>
-                        <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
+                        <a href="{{ route('login') }}" class="header-button-login">{{ xe_trans('xe::login') }}</a>
+                        <a href="{{ route('auth.register') }}" class="header-button-login">{{ xe_trans('xe::singUp') }}</a>
                     @else
                         <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
                             {{ Auth::user()->getDisplayName() }}
                         </a>
                         @if (Auth::user()->isAdmin() == true)
-                            <a href="{{ route('settings') }}" class="header-button-login" target="_blank">관리자 설정</a>
+                            <a href="{{ route('settings') }}" class="header-button-login" target="_blank">{{ xe_trans('xe::management') }}</a>
                         @endif
                         <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
-                        <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
+                        <a href="{{ route('logout') }}" class="header-button-login">{{ xe_trans('xe::logout') }}</a>
                     @endif
                 </div>
             </div>
@@ -37,18 +37,18 @@
             <div class="gnb-inner">
                 <div class="header-button-mobile-box">
                     @if (Auth::check() == false)
-                        <a href="{{ route('login') }}" class="header-button-login">로그인</a>
-                        <a href="{{ route('auth.register') }}" class="header-button-login">회원가입</a>
+                        <a href="{{ route('login') }}" class="header-button-login">{{ xe_trans('xe::login') }}</a>
+                        <a href="{{ route('auth.register') }}" class="header-button-login">{{ xe_trans('xe::signUp') }}</a>
                     @else
                         <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
                             {{ Auth::user()->getDisplayName() }}
                         </a>
                         @if (Auth::user()->isAdmin() == true)
-                            <a href="{{ route('settings') }}" class="header-button-login" target="_blank">관리자 설정</a>
+                            <a href="{{ route('settings') }}" class="header-button-login" target="_blank">{{ xe_trans('xe::management') }}</a>
                         @endif
                         <br>
                         <a href="{{ route('user.settings') }}" class="header-button-login">내 정보</a>
-                        <a href="{{ route('logout') }}" class="header-button-login">로그아웃</a>
+                        <a href="{{ route('logout') }}" class="header-button-login">{{ xe_trans('xe::logout') }}</a>
                     @endif
                 </div>
 

@@ -13,11 +13,13 @@
                                 <div class="xe-eastern-top-image-title-widget-info">
                                     <div class="info-content">
                                         <div class="info-box">
-                                            @if ($config->get('useSubHeader') == 'Y')
-                                                <h2 class="widget-xe-eastern-spot-slide-slider__item-content-title">{!! xe_trans($config->get('subHeaderTitle', '')) !!}</h2>
-                                                <p class="widget-xe-eastern-spot-slide-slider__item-content-text">{!! $data['currentSubHeaderDescription'] !!}</p>
-                                            @elseif ($config->get('useSubHeader') == 'Y-IMAGE')
-                                                <p class="widget-xe-eastern-spot-slide-slider__item-content-text">{!! xe_trans($config->get('subHeaderDescription', '')) !!}</p>
+                                            @if ($config->get('useSubHeader') !== 'N')
+                                                @if($data['currentSubHeaderDescription'])
+                                                    {!! $data['currentSubHeaderDescription'] !!}
+                                                @else
+                                                    <h2>{!! xe_trans($config->get('subHeaderTitle', '')) !!}</h2>
+                                                    <p>{!! xe_trans($config->get('subHeaderDescription', '')) !!}</p>
+                                                @endif
                                             @endif
                                         </div>
                                     </div>

@@ -82,7 +82,11 @@ return [
                 ],
                 'colorPrimary' => [
                     '_type' => 'colorpicker',
-                    'label' => '테마 컬러',
+                    'label' => 'Regular 컬러',
+                ],
+                'colorActive' => [
+                    '_type' => 'colorpicker',
+                    'label' => 'hover, focus, active 컬러',
                 ],
             ]
         ],
@@ -153,8 +157,17 @@ return [
                         'N' => '표시 안함'
                     ]
                 ],
+                'openSubSidebar' => [
+                    '_type' => 'select',
+                    'label' => '사이드 메뉴 펼침',
+                    'options' => [
+                        'Y' => '전체 하위 메뉴를 보이기',
+                        'N' => '선택된 메뉴의 하위 항목만 보이기'
+                    ],
+                    'value' => 'Y'
+                ],
                 'useSubHeader' => [
-                    '_type' => 'radio',
+                    '_type' => 'select',
                     'label' => '상단 배너 설정',
                     'options' => [
                         'Y' => '표시함',

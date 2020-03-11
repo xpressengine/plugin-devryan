@@ -5,15 +5,15 @@
 @import 'common/utilities'; // 유틸리티
 
 // eastern hotel
-@import 'theme/components/main/widget-xe-eastern-spot-slide'; // 상단 슬라이드 위젯
-@import 'theme/components/main/widget-xe-eastern-specialroom-slide'; // special room 슬라이드 위젯
-@import 'theme/components/main/widget-xe-eastern-more-info'; // 메인 - 추가 정보 영역 위젯
-@import 'theme/components/main/widget-xe-eastern-board-image'; // 메인 - 게시물 이미지 리스트 위젯
-@import 'theme/components/main/widget-xe-eastern-main-layer-popup'; // 메인 - 레이어 팝업
-@import 'theme/components/main/widget-xe-eastern-image-slide'; // 메인 - 레이어 팝업
+@import 'theme/components/main/widget-spot-slide'; // 상단 슬라이드 위젯
+@import 'theme/components/main/widget-specialroom-slide'; // special room 슬라이드 위젯
+@import 'theme/components/main/widget-more-info'; // 메인 - 추가 정보 영역 위젯
+@import 'theme/components/main/widget-board-image'; // 메인 - 게시물 이미지 리스트 위젯
+@import 'theme/components/main/widget-main-layer-popup'; // 메인 - 레이어 팝업
+@import 'theme/components/main/widget-image-slide'; // 메인 - 레이어 팝업
 
-@import 'theme/components/sub/widget-xe-eastern-top-image-title'; // 서브페이지 상단 배경이미지 제목 위젯
-@import 'theme/components/sub/widget-xe-eastern-location-info'; // 서브페이지 오시는길 정보 노출 영역
-@import 'theme/components/sub/widget-xe-eastern-map'; // 서브페이지 오시는길 지도 api 적용 영역
-@import 'theme/components/sub/widget-xe-eastern-board-post-list-tour'; // 서브페이지 주변 관광지, 링크 별도 리스트
-@import 'theme/components/sub/widget-xe-eastern-gallery'; // 겔러리 위젯 (pageswipe 적용, lightbox 와 비슷한것)
+@import 'theme/components/sub/widget-top-image-title'; // 서브페이지 상단 배경이미지 제목 위젯
+@import 'theme/components/sub/widget-location-info'; // 서브페이지 오시는길 정보 노출 영역
+@import 'theme/components/sub/widget-map'; // 서브페이지 오시는길 지도 api 적용 영역
+@import 'theme/components/sub/widget-board-post-list-tour'; // 서브페이지 주변 관광지, 링크 별도 리스트
+@import 'theme/components/sub/widget-gallery'; // 겔러리 위젯 (pageswipe 적용, lightbox 와 비슷한것)

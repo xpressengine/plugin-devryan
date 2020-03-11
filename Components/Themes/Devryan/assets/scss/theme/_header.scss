@@ -1,4 +1,11 @@
 /* header : id="header" 내부 css */
+.header__logo {
+  &-link {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 .header--expand-menu {
   z-index: 90;
   position: fixed;

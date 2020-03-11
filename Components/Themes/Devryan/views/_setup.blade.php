@@ -1,5 +1,6 @@
 @php
     $config->_selectedMainMenu = null;
+    $config->_useSubSidemenu = false;
     $config->_subContainerCol = 12;
     $config->_useFooterLink = false;
 
@@ -29,20 +30,24 @@
         $config->set('copyrightContent', 'Powered by <a href="https://www.xpressengine.com/" target="_blank">XE</a>.');
     }
 
-    // 서브 헤더
-    // 기본 값
-    $config->set('useSubHeader', $config->get('useSubHeader', 'Y'));
-    if ($config->get('useSubSidebar', 'Y') === 'Y') {
-        // 서브메뉴 여부에 따른 콘텐츠 폭 조정
-        $config->_subContainerCol = 9;
-    }
-
+    // 메뉴
     foreach (menu_list($config->get('mainMenu')) as $menu) {
         // 선택된 메뉴
         if ($menu['selected']) {
             $config->_selectedMainMenu = $menu;
+            $config->_useSubSidemenu = isset($menu['children']) && count($menu['children']);
         }
     }
+
+    // 서브 헤더
+    // 기본 값
+    $config->set('useSubHeader', $config->get('useSubHeader', 'Y'));
+    if ($config->get('useSubSidebar', 'Y') === 'Y' && $config->_useSubSidemenu) {
+        // 서브메뉴 여부에 따른 콘텐츠 폭 조정
+        $config->_subContainerCol = 9;
+    }
+
+
 
     // SNS 링크
     if (!$config->get('socialFacebook')
@@ -74,11 +79,96 @@
 .color-primary {
     color: {{ $config->get('colorPrimary', '#2684ff') }} !important;
 }
+
 @if ($config->get('colorPrimary', null))
-    .list-group-item.active,
-    .list-group-item:hover,
-    .list-group-item:focus {
+    .xe-theme--devryan .theme-sidebar.list-group > .list-group-item.active > .list-group-item-action,
+    .xe-theme--devryan .theme-sidebar.list-group > .list-group-item > .list-group-item-action:hover,
+    .xe-theme--devryan .theme-sidebar.list-group > .list-group-item > .list-group-item-action:focus {
         background-color: {{ $config->get('colorPrimary', '') }} !important;
+    }
+
+    .board_header .bd_btn_area .on, .board_header .bd_btn_area li a:hover {
+        color: {{ $config->get('active', '') }} !important;
+    }
+
+    .bd_paginate > strong, .bd_paginate > a:hover {
+        border-color: {{ $config->get('active', '') }} !important;
+        background-color: {{ $config->get('active', '') }} !important;
+    }
+
+    .read_header .category {
+        color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .write_footer .write_form_btn .btn_submit:hover, .write_footer .write_form_btn .btn_submit:focus {
+        border-color: {{ $config->get('active', '') }};
+        background-color: {{ $config->get('active', '') }};
+    }
+
+    .board_list .reply_num {
+        color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .board_list a:hover {
+        color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    // 로그인 및 공통
+    .user .user-login .user-login-link {
+        color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .user .auth-user__text a {
+        color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .xe-dropdown-menu li.on>a, .xe-dropdown-menu li>a:hover {
+        color: {{ $config->get('active', '') }};
+    }
+
+    .xe-btn-primary-outline {
+        color: {{ $config->get('colorPrimary', '') }};
+        border-color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .xe-btn-primary-outline:hover {
+        border-color: {{ $config->get('active', '') }};
+        background-color: {{ $config->get('active', '') }};
+    }
+
+    .xe-label>input[type="checkbox"]:checked+.xe-input-helper {
+        background-color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .xe-label>input[type="checkbox"]:hover+.xe-input-helper, .xe-label>input[type="radio"]:hover+.xe-input-helper {
+        border-color: {{ $config->get('active', '') }};
+    }
+
+    .xe-badge.xe-primary {
+        background-color: {{ $config->get('colorPrimary', '') }} !important;
+    }
+
+    .xu-button--primary:hover:not([disabled]), .xu-button--primary.xu-button--hover:not([disabled]) {
+        background-color: {{ $config->get('active', '') }} !important;
+    }
+
+    .xu-form-group input.xu-form-group__control:focus {
+        border-color: {{ $config->get('active', '') }} !important;
+    }
+
+    .xu-label-checkradio:hover input[type="checkbox"] + .xu-label-checkradio__helper, .xu-label-checkradio.xu-label-checkradio--hover input[type="checkbox"] + .xu-label-checkradio__helper {
+        border-color: {{ $config->get('active', '') }} !important;
+    }
+
+    .xu-label-checkradio:hover input[type="checkbox"]:checked + .xu-label-checkradio__helper, .xu-label-checkradio.xu-label-checkradio--hover input[type="checkbox"]:checked + .xu-label-checkradio__helper {
+        border-color: {{ $config->get('active', '') }} !important;
+        background-color: {{ $config->get('active', '') }} !important;
+    }
+@endif
+
+@if ($config->get('colorActive', null))
+    .xe-theme--devryan .gnb__menu-link:hover {
+        color: {{ $config->get('colorActive') }};
     }
 @endif
 </style>

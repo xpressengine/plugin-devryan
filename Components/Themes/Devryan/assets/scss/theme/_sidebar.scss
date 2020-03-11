@@ -3,7 +3,7 @@
   &.list-group {
     margin-top: 40px;
     border: 1px solid #dbdbdb;
-    background-color: #fdfdfd;
+    background-color: #f1f3f5;
 
     > .list-group-item.active > .list-group-item-action,
     > .list-group-item > .list-group-item-action:hover,
@@ -18,6 +18,9 @@
     > .list-group-item {
       border-bottom: 1px solid #dbdbdb;
       font-size: 17px;
+      &:last-child {
+        border-bottom: 0;
+      }
     }
     .list-group-item-action {
       display: block;
@@ -32,7 +35,7 @@
 .theme-sidebar {
   .list-group {
     &--sub {
-      padding: 10px 0;
+      padding: 4px 0;
       background-color: #fff;
 
       .list-group-item {
