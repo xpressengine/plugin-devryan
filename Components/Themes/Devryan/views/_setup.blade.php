@@ -87,40 +87,76 @@
         background-color: {{ $config->get('colorPrimary', '') }} !important;
     }
 
-    .board_header .bd_btn_area .on, .board_header .bd_btn_area li a:hover {
-        color: {{ $config->get('active', '') }} !important;
+    .xe-theme--devryan .gnb__submenu .gnb__submenu-link:hover {
+        color: {{ $config->get('colorActive', '') }} !important;
     }
 
-    .bd_paginate > strong, .bd_paginate > a:hover {
-        border-color: {{ $config->get('active', '') }} !important;
-        background-color: {{ $config->get('active', '') }} !important;
+    .xe-theme--devryan .board_header .bd_btn_area .on,
+    .xe-theme--devryan .board_header .bd_btn_area li a:hover {
+        color: {{ $config->get('colorActive', '') }} !important;
     }
 
-    .read_header .category {
+    .xe-theme--devryan .bd_paginate > strong,
+    .xe-theme--devryan .bd_paginate > a:hover {
+        border-color: {{ $config->get('colorActive', '') }} !important;
+        background-color: {{ $config->get('colorActive', '') }} !important;
+    }
+
+    .xe-theme--devryan .read_header .category {
         color: {{ $config->get('colorPrimary', '') }};
     }
 
-    .write_footer .write_form_btn .btn_submit:hover, .write_footer .write_form_btn .btn_submit:focus {
-        border-color: {{ $config->get('active', '') }};
-        background-color: {{ $config->get('active', '') }};
+    .xe-theme--devryan .write_footer .write_form_btn .btn_submit:hover,
+    .xe-theme--devryan .write_footer .write_form_btn .btn_submit:focus {
+        border-color: {{ $config->get('colorActive', '') }};
+        background-color: {{ $config->get('colorActive', '') }};
     }
 
-    .board_list .reply_num {
+    .xe-theme--devryan .board_list .reply_num {
         color: {{ $config->get('colorPrimary', '') }};
     }
 
-    .board_list a:hover {
+    .xe-theme--devryan .board_list a:hover {
         color: {{ $config->get('colorPrimary', '') }};
     }
 
     // 로그인 및 공통
-    .user .user-login .user-login-link {
+    .xe-theme--devryan .user .user-login .user-login-link {
         color: {{ $config->get('colorPrimary', '') }};
     }
 
-    .user .auth-user__text a {
+    .xe-theme--devryan .user .auth-user__text a {
         color: {{ $config->get('colorPrimary', '') }};
     }
+
+    .xe-theme--devryan .xu-form-group input.xu-form-group__control:focus {
+        border-color: {{ $config->get('colorPrimary', '') }};
+    }
+    .xe-theme--devryan .xu-button--primary {
+        background-color: {{ $config->get('colorPrimary', '') }};
+    }
+
+    .xe-theme--devryan .xu-button--primary:focus:not([disabled]),
+    .xe-theme--devryan .xu-button--primary.xu-button--focus:not([disabled]),
+    .xe-theme--devryan .xu-button--primary:hover:not([disabled]),
+    .xe-theme--devryan .xu-button--primary.xu-button--hover:not([disabled]) {
+        background-color: {{ $config->get('colorActive', '') }};
+    }
+
+    .xe-theme--devryan .xu-label-checkradio:hover input[type="checkbox"] + .xu-label-checkradio__helper,
+    .xe-theme--devryan .xu-label-checkradio.xu-label-checkradio--hover input[type="checkbox"] + .xu-label-checkradio__helper {
+        border-color: {{ $config->get('colorActive', '') }};
+    }
+    .xe-theme--devryan .xu-label-checkradio input[type="checkbox"]:checked + .xu-label-checkradio__helper {
+        border-color: {{ $config->get('colorPrimary', '') }};
+        background-color: {{ $config->get('colorPrimary', '') }};
+    }
+    .xe-theme--devryan .xu-label-checkradio:hover input[type="checkbox"]:checked + .xu-label-checkradio__helper,
+    .xe-theme--devryan .xu-label-checkradio.xu-label-checkradio--hover input[type="checkbox"]:checked + .xu-label-checkradio__helper {
+        border-color: {{ $config->get('colorActive', '') }};
+        background-color: {{ $config->get('colorActive', '') }};
+    }
+
 
     .xe-dropdown-menu li.on>a, .xe-dropdown-menu li>a:hover {
         color: {{ $config->get('active', '') }};

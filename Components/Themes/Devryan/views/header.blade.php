@@ -18,7 +18,7 @@
                 <div class="header-button-box">
                     @if (Auth::check() == false)
                         <a href="{{ route('login') }}" class="header-button-login">{{ xe_trans('xe::login') }}</a>
-                        <a href="{{ route('auth.register') }}" class="header-button-login">{{ xe_trans('xe::singUp') }}</a>
+                        <a href="{{ route('auth.register') }}" class="header-button-login">{{ xe_trans('xe::signUp') }}</a>
                     @else
                         <a href="{{ route('user.profile', ['user' => auth()->id()]) }}" class="header-button-login">
                             {{ Auth::user()->getDisplayName() }}
