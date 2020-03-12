@@ -30,7 +30,7 @@
 
     @include($theme::view('header'))
 
-    <main id="container" class="xe-theme__content-container container-layout xeofficial-container">
+    <main id="container" class="xe-theme__content-container xe-theme__content-container--{{ $config->get('layoutType', 'main') }} @if($config->get('useSubHeader'))xe-theme__content-container--sub-header @endif container-layout xeofficial-container">
         @include($theme::view($config->get('layoutType', 'main')))
     </main>
 

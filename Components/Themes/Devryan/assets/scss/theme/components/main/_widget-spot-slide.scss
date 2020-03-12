@@ -71,7 +71,7 @@
 
         &.slick-active {
           button {
-            background-color: #2684ff;
+            background-color: #fff;
           }
         }
 
@@ -81,9 +81,9 @@
           width: 100%;
           margin: 20px 0;
           padding: 0;
-          border: 0 none;
-          height: 1px;
-          background-color: #fff;
+          border: 1px solid rgba(0,0,0,0.05);
+          height: 5px;
+          background-color: rgba(255, 255, 255, 0.5);
           cursor: pointer;
           outline: none;
         }
@@ -159,25 +159,6 @@
           padding: 0;
           list-style: none;
           cursor: pointer;
-
-          &.slick-active {
-            button {
-              background-color: #345bd9;
-            }
-          }
-
-          button {
-            font-size: 0;
-            line-height: 0;
-            width: 100%;
-            margin: 20px 0;
-            padding: 0;
-            border: 0 none;
-            height: 1px;
-            background-color: #fff;
-            cursor: pointer;
-            outline: none;
-          }
         }
       }
 
@@ -217,11 +198,11 @@
     }
 
     .widget-xe-eastern-spot-slide-slider__item-box {
-      height: 800px;
+      height: 600px;
     }
 
     .widget-xe-eastern-spot-slide-slider__item {
-      height: 800px;
+      height: 600px;
     }
 
     .widget-xe-eastern-spot-slide-slider__item-content {

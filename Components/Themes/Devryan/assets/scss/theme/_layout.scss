@@ -21,13 +21,15 @@ body {
   }
 }
 
+.xe-theme__content-container--sub-no-header .content-layout {
+  padding-top: 40px;
+}
 
-// ::-moz-selection {
-//   background: #ffee38;
-// }
-// ::selection {
-//   background: #ffee38;
-// }
+@include pc-wide {
+  .xe-theme__content-container--sub-no-header .content-layout {
+    padding-top: 80px;
+  }
+}
 
 // === 메뉴 건너뛰기 영역 ====
 .skip {

@@ -272,8 +272,6 @@
 
 // 페이지 모듈 스타일 적용
 .page-container {
-  padding: 20px 0;
-
   .xe-content {
     h1, h2, h3, h4, h5, h6 {
       font-weight: 300;
@@ -485,12 +483,6 @@
     padding-bottom: 40px;
   }
   // //테마 탑버튼
-
-  // 페이지 모듈 스타일 적용
-  .page-container {
-    padding: 40px 0;
-  }
-  // //페이지 모듈 스타일 적용
 }
 
 @include pc-wide {
