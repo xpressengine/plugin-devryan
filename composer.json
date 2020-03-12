@@ -24,6 +24,7 @@
   "extra": {
     "xpressengine": {
       "title": "DevRyan Theme",
+      "icon": "icon.jpg",
       "component": {
         "theme/devryan@devryan": {
           "class": "Xpressengine\\Plugins\\Devryan\\Components\\Themes\\Devryan\\DevryanTheme",
