@@ -24,12 +24,17 @@
   "extra": {
     "xpressengine": {
       "title": "DevRyan Theme",
+      "screenshots": [
+        "screenshots/screenshot01.jpg",
+        "screenshots/screenshot02.jpg"
+      ],
       "icon": "icon.jpg",
       "component": {
         "theme/devryan@devryan": {
           "class": "Xpressengine\\Plugins\\Devryan\\Components\\Themes\\Devryan\\DevryanTheme",
           "name": "DevRyan Theme",
-          "description": "DevRyan"
+          "description": "DevRyan",
+          "screenshot": "/plugins/devryan/screenshots/screenshot01.jpg"
         },
 
         "module/board@board/skin/devryan@card": {
