@@ -1,3 +1,9 @@
+{{ app('xe.frontend')->css('plugins/devryan/Components/Themes/Devryan/assets/css/widget.css')->load() }}
+{{ app('xe.frontend')->js([
+    'plugins/devryan/Components/Themes/Devryan/assets/js/slick.min.js',
+    'plugins/devryan/Components/Themes/Devryan/assets/js/theme.js',
+])->location('head.append')->load() }}
+
 <!-- 갤러리 배너 위젯 -->
 @php
     XeFrontend::css(asset('plugins/devryan/Components/Skins/Banner/Gallery/assets/css/photoswipe.css'))->load();

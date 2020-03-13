@@ -1,3 +1,9 @@
+{{ app('xe.frontend')->css('plugins/devryan/Components/Themes/Devryan/assets/css/widget.css')->load() }}
+{{ app('xe.frontend')->js([
+    'plugins/devryan/Components/Themes/Devryan/assets/js/slick.min.js',
+    'plugins/devryan/Components/Themes/Devryan/assets/js/theme.js',
+])->location('head.append')->load() }}
+
 <!-- special rooms 슬라이드 위젯 -->
 <div class="xe-row">
     <div class="xe-col-md-12">

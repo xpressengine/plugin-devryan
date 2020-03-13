@@ -1,3 +1,9 @@
+{{ app('xe.frontend')->css('plugins/devryan/Components/Themes/Devryan/assets/css/widget.css')->load() }}
+{{ app('xe.frontend')->js([
+    'plugins/devryan/Components/Themes/Devryan/assets/js/slick.min.js',
+    'plugins/devryan/Components/Themes/Devryan/assets/js/theme.js',
+])->location('head.append')->load() }}
+
 <div class="xe-row">
     <div class="xe-col-md-12">
         <section class="widget-xe-eastern-image-slide">
@@ -21,4 +27,3 @@
         <!-- //룸 상세 위젯 영역 -->
     </div>
 </div>
-<!-- //룸 상세 위젯 -->
